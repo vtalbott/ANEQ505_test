@@ -2,7 +2,7 @@
 - Install Git if you don't already have it.
 https://git-scm.com/install/
 
-- To check if you have Git enter this into the command line.  
+- To check if you have Git installed enter this into the command line.  
 ```
 git --version
 ```
@@ -16,13 +16,13 @@ https://obsidian.md/download
 - Make a new vault, name it ANEQ505_HW and add make sure for the location you remember where you put it. 
 - Delete the welcome note in the vault
 
-### Step 4: Set up Git Hub repository
+### Step 4: Set up GitHub repository
 - Login to github and make a new repository 
 	- (Click the little cat on the upper left hand corner and click the green button that says new)
 - Name the repository ANEQ505_HW
 - Make sure the visibility is set to public so we can see your homework.
 - Make sure add readme is off. 
-### Step 5: Set up access token in Git hub. 
+### Step 5: Set up access token in GitHub. 
 - Click your profile picture
 - Go to settings
 - Scroll all the way down and on the left had side click developer settings.
@@ -54,8 +54,8 @@ git add .
 git commit -m "Initial commit"
 ```
 
-Add github as a remote
-- the https can be found in you github repository on the github website
+Add GitHub as a remote
+- the https can be found in you GitHub repository on the GitHub website
 ```
 git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
 
