@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Module1/Module 1 code and lecture material.md",
+                "file": "Git_Obsidian_Setup.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Module 1 code and lecture material"
+              "title": "Git_Obsidian_Setup"
             }
           }
         ],
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Module1/Module 1 code and lecture material.md",
+                "file": "Git_Obsidian_Setup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Module 1 code and lecture material"
+              "title": "Backlinks for Git_Obsidian_Setup"
             }
           },
           {
@@ -142,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Module1/Module 1 code and lecture material.md",
+                "file": "Git_Obsidian_Setup.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Module 1 code and lecture material"
+              "title": "Outgoing links from Git_Obsidian_Setup"
             }
           },
           {
@@ -185,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Module1/Module 1 code and lecture material.md",
+                "file": "Git_Obsidian_Setup.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Module 1 code and lecture material"
+              "title": "Outline of Git_Obsidian_Setup"
             }
           }
         ]
@@ -213,10 +213,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b9c6b380112d5bce",
+  "active": "2bd8e5064981fa30",
   "lastOpenFiles": [
-    "Git_Obsidian_Setup.md",
     "Module1/Module 1 code and lecture material.md",
+    "Git_Obsidian_Setup.md",
     "Module1",
     "README.md",
     "Welcome.md"

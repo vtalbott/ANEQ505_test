@@ -48,6 +48,10 @@ Initialize Git
 git init
 ```
 
+Check branch name 
+```
+git branch
+```
 Create an initial commit
 ```
 git add .
