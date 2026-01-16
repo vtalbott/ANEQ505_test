@@ -27,32 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "How to set up git in obsidian.md",
+                "file": "Git_Obsidian_Setup.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "How to set up git in obsidian"
+              "title": "Git_Obsidian_Setup"
             }
           }
         ],
         "currentTab": 1
-      },
-      {
-        "id": "3bbd3f94baab3b44",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "29c037db30b3f4c5",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -125,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "How to set up git in obsidian.md",
+                "file": "Git_Obsidian_Setup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for How to set up git in obsidian"
+              "title": "Backlinks for Git_Obsidian_Setup"
             }
           },
           {
@@ -144,12 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "How to set up git in obsidian.md",
+                "file": "Git_Obsidian_Setup.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from How to set up git in obsidian"
+              "title": "Outgoing links from Git_Obsidian_Setup"
             }
           },
           {
@@ -187,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "How to set up git in obsidian.md",
+                "file": "Git_Obsidian_Setup.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of How to set up git in obsidian"
+              "title": "Outline of Git_Obsidian_Setup"
             }
           }
         ]
@@ -218,7 +202,7 @@
   "active": "57dd0bb4e32efcff",
   "lastOpenFiles": [
     "README.md",
-    "How to set up git in obsidian.md",
+    "Git_Obsidian_Setup.md",
     "Welcome.md"
   ]
 }
