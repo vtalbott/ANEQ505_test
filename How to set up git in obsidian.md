@@ -14,6 +14,7 @@ https://obsidian.md/download
 ### Step 3: Set up Obsidian Vault
 - Open Obsidian it will give you the option to create new vault or open folder as vault
 - Make a new vault, name it ANEQ505_HW and add make sure for the location you remember where you put it. 
+- Delete the welcome note in the vault
 
 ### Step 4: Set up Git Hub repository
 - Login to github and make a new repository 
@@ -42,7 +43,48 @@ https://obsidian.md/download
 	- then open terminal at file
 - Enter the following commands 
 
-Initialize 
+Initialize Git
 ```
 git init
 ```
+
+Create an initial commit
+```
+git add .
+git commit -m "Initial commit"
+```
+
+Add github as a remote
+- the https can be found in you github repository on the github website
+```
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+
+```
+
+Push and set upstream branch
+```
+git push -u origin main
+```
+
+- github will then through your terminal ask for your username type in your github username. 
+- Then a field will popup with a lock asing for your password and paste in your access token from earlier. 
+
+### Step 7: Set up Git in your obsidian vault
+- Go to settings in your obsidian vault 
+- Click community plugins
+- Then click browse
+- Then search for Git
+- Select Git and then Install
+- Then click enable. 
+- Go to the obsidian git settings 
+	- make sure that Custom base path is blank
+	- If you don't see custom base path in your settings then it is already blank
+- Restart obsidian
+
+### Step 8: Push and Commit in obsidian
+- Reopen your vault and add a new note and make a change to the note. 
+- Then open the command pallet (command/control + p)
+- Search for Git: commit and select it
+- In the command palette again search for Git: push and select it. 
+- Go to the obsidian git settings and select a time for automatic push/pull from git hub so you don't have to manually do it. 
+### Step 9: Check your GitHub online to see if the files were committed. 
