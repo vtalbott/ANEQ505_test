@@ -63,12 +63,14 @@
             "id": "a9c1576efb6c14b0",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Module1/Images/Pasted image 20260119102959.png"
+                "file": "Module1/Module 1 Introduction to command line, linux, and Alpine.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260119102959"
+              "icon": "lucide-file",
+              "title": "Module 1 Introduction to command line, linux, and Alpine"
             }
           }
         ],
@@ -235,8 +237,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b9c6b380112d5bce",
+  "active": "a9c1576efb6c14b0",
   "lastOpenFiles": [
+    "index.html",
+    "Git_Obsidian_Setup.md",
+    "Module1/Images/Pasted image 20260119102959.png",
     "Module1/Images/Pasted image 20260119102147.png",
     "Module1/Images/Pasted image 20260119102237.png",
     "Module1/Module 1 Introduction to command line, linux, and Alpine.md",
@@ -248,10 +253,7 @@
     "Module1/Images/Pasted image 20260119103449.png",
     "Module1/Images/Pasted image 20260119103334.png",
     "Module1/Images/Pasted image 20260119103310.png",
-    "Module1/Images/Pasted image 20260119103241.png",
-    "Module1/Images/Pasted image 20260119103150.png",
     "Images",
-    "Git_Obsidian_Setup.md",
     "Module1",
     "README.md",
     "Welcome.md"

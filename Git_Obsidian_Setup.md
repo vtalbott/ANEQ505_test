@@ -94,3 +94,14 @@ git push -u origin main
 ### Step 9: Check your GitHub online to see if the files were committed. 
 - You should see the file that you edited and an .obsidian file
 - The .obsidian file has all the settings and community plugins so that If you or someone else downloads the vault they have those settings built in. 
+
+
+#### Some Notes
+For bigger pushes 
+- This includes a lot of figures or if you haven't pushed in a while 
+- Use this in the Terminal from anywhere to Ingrease Git's HTTP buffer. 
+	- This prevents GitHub from dropping the connection during larger pushes. 
+
+```
+git config --global http.postBuffer 524288000
+```
