@@ -86,7 +86,7 @@ Think of these spaces like folders on a computer, where "home" is a folder withi
 ![[Pasted image 20260119102959.png]]
 
   
-For this class, we will ~={red}**work in the scratch directory**=~ and back our files up to the projects directory. 
+For this class, we will **work in the scratch directory** and back our files up to the projects directory. 
 
 Alpine documentation: [https://curc.readthedocs.io/en/latest/Links to an external site.](https://curc.readthedocs.io/en/latest/index.html "(opens in a new window)") (can be really helpful!)
 
