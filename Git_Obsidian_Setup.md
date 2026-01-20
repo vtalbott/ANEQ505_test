@@ -105,3 +105,7 @@ For bigger pushes
 ```
 git config --global http.postBuffer 524288000
 ```
+
+
+#### Git for windows
+Need to install [https://gitforwindows.org/](https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgitforwindows.org%2F&data=05%7C02%7Ctubyez.lucky%40colostate.edu%7C3d643be3f4fe4899e28608ddcf923c0f%7Cafb58802ff7a4bb1ab21367ff2ecfc8b%7C0%7C0%7C638894949153995973%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=lccPDa%2BZLL9TLhlRqha%2FalLu2My7mLrHpRt6csRg1wc%3D&reserved=0 "Original URL: https://gitforwindows.org/. Click or tap if you trust this link.")
