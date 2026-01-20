@@ -13,7 +13,7 @@ https://obsidian.md/download
 
 ### Step 3: Set up Obsidian Vault
 - Open Obsidian it will give you the option to create new vault or open folder as vault
-- Make a new vault, name it ANEQ505_HW and add make sure for the location you remember where you put it. 
+- Make a new vault, name it ANEQ505_HW and make sure you remember where you put the folder/vault
 - Delete the welcome note in the vault
 
 ### Step 4: Set up GitHub repository
