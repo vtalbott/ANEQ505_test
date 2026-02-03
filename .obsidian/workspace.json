@@ -65,12 +65,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git_Obsidian_Setup.md",
+                "file": "Example Obsidian Note.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Git_Obsidian_Setup"
+              "title": "Example Obsidian Note"
             }
           }
         ],
@@ -237,12 +237,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b9c6b380112d5bce",
+  "active": "a9c1576efb6c14b0",
   "lastOpenFiles": [
+    "Git_Obsidian_Setup.md",
+    "Example Obsidian Note.md",
+    "Module 2",
     "Module1/Module 1 Introduction to command line, linux, and Alpine.md",
     "pico.save",
     "index.html",
-    "Git_Obsidian_Setup.md",
     "Module1/Images/Pasted image 20260119102959.png",
     "Module1/Images/Pasted image 20260119102147.png",
     "Module1/Images/Pasted image 20260119102237.png",
