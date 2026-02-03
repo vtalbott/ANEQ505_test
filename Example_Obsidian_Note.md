@@ -54,7 +54,7 @@ Section Break (This is just a line of ------- across the whole page)
 - Edit and reading mode are turned off/on by the book/pencil icon in the top right hand corner. 
 - If you see the book icon you are in edit mode and can edit your document. 
 - If you see the pencil icon you are in reading mode and cannot make edits to your document. 
-- If you press the 3 dots in the upper right hand corner you will see an option for source mode. If you select it a check will show up by the mode and obsidian will no longer automatically process the markdown language and you can see the symbols used for mark down formatting. For example you will see the hashtags before the headings. Where as when source mode is off obsidian automatically reads mark down format and makes into how it would look if it was rendered.. To deactivate this mode click the check and source mode will be turned off. 
+- If you press the 3 dots in the upper right hand corner you will see an option for source mode. If you select it a check will show up by the mode and obsidian will no longer automatically process the markdown language and you can see the symbols used for mark down formatting. For example you will see the hashtags before the headings. Where as when source mode is off obsidian automatically reads mark down format and makes into how it would look if it was rendered.. To deactivate this mode click the check and source mode will be turned off. This mode is similar to the code view on GitHub. 
 
 ------------------------------------------------------------------------
 ## Community plugins
