@@ -22,7 +22,7 @@ ainteractive --time=01:00:00 --parition=amilan --notes=1 --ntasks=2 --qos=normal
 - qiime2 analysis was done with qiime2 amplicon version 2024.10
 ```
 module purge
-module load qiime2-amplicon-2024.10
+module load qiime2/2024.10_amplicon
 ```
 
 
@@ -37,6 +37,7 @@ command for demultiplexing
 
 - I will then put a note for how everything went ex: 
 	- Demultiplexing completed
-	- Average quality from demux summary was 30. 
-	- Will trim at 250 bp. 
+	- Average quality score from demux summary was 30. 
+	- Will trim at 0 bp.
+	- Will truncate at 250 bp. 
 - I will also save the qiime2 .qzv files from analysis and save them in the same file as my obsidian vault and then link the files below the command (you don't have to this, I do so it's easy to find them later if I want to reference them).
