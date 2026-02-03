@@ -55,3 +55,13 @@ Section Break (This is just a line of ------- across the whole page)
 - If you see the book icon you are in edit mode and can edit your document. 
 - If you see the pencil icon you are in reading mode and cannot make edits to your document. 
 - If you press the 3 dots in the upper right hand corner you will see an option for source mode. If you select it a check will show up by the mode and obsidian will no longer automatically process the markdown language and you can see the symbols used for mark down formatting. For example you will see the hashtags before the headings. Where as when source mode is off obsidian automatically reads mark down format and makes into how it would look if it was rendered.. To deactivate this mode click the check and source mode will be turned off. 
+
+------------------------------------------------------------------------
+## Community plugins
+
+ Obsidian has 100s of community plugins below is a list of some of the ones I use and what they do
+- Highlightr - It gives you the ability highlight text
+- Templater - It allows you to make templates out of obsidian notes
+- Annotator - It allows you to open and annotate PDF and EPUB files
+- Pandoc - It adds command palette options to export your notes to a variety of formats including Word Documents, PDFs, ePub books, HTML websites, PowerPoints and LaTeX among (many) others
+- And many others if you can think of it then someone has probably made a community plugin. for it. Feel free to explorer and see what plugins sound interesting/helpful to you. 
