@@ -18,12 +18,36 @@ This is a code block
 # lines with comment sign will not run. These lines can be used to annotate code. 
 ```
 
-Text in code blocks have no formatting and can be copy and pasted into command line. 
+Text in code blocks have no formatting and can be copied and pasted into command line. 
 
-This is an example of what 
+This is an example of what a code block could like in your work flow. 
+```
+# Denoising with dada2
+qiime dada2 denoise-paired \
+  --i-demultiplexed-seqs demux_run2.qza \
+  --p-trunc-len-f 150 \
+  --p-trunc-len-r 150 \
+  --p-n-threads 6 \
+  --o-table table_run2.qza \
+  --o-representative-sequences seqs_run2.qza \
+  --o-denoising-stats dada2_stats_run2.qza
+```
+
+Some things to avoid
+- Comments in the middle of the command
+```
+qiime dada2 denoise-paired \
+  --i-demultiplexed-seqs demux_run2.qza \
+  --p-trunc-len-f 150 \
+  --p-trunc-len-r 150 \
+  --p-n-threads 6 \
+  --o-table table_run2.qza \
+  --o-representative-sequences seqs_run2.qza \ # If you put a comment here the next line will not run
+  --o-denoising-stats dada2_stats_run2.qza
+```
 
 -----------------------------------------------------------------------------------
-Section Break (This is just a line of -------)
+Section Break (This is just a line of ------- across the whole page)
 
 ## Notes about viewing modes
 - Obsidian has three viewing modes and that is edit, reading, and source mode.
