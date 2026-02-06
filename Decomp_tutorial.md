@@ -33,4 +33,14 @@ qiime tools import \
 --output-path demux/demux_run3.qza
 ```
 - this command worked 
-- 
+-
+```
+qiime dada2 denoise-paired \
+--i-demultiplexed-seqs ../demux/demux_run2.qza \
+--p-trunc-len-f 150 \
+--p-trunc-len-r 150 \
+--p-n-threads 8 \
+--o-table table_run2.qza \
+--o-representative-sequences seqs_run2.qza \
+--o-denoising-stats dada2_stats_run2.qza
+```
