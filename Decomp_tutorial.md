@@ -22,3 +22,15 @@ module load qiime2/2024.10_amplicon
 ```
 
 ```
+
+Load in sequences 
+
+```
+qiime tools import \
+--type "SampleData[PairedEndSequencesWithQuality]" \
+--input-format PairedEndFastqManifestPhred33V2 \
+--input-path manifest/manifest_run3.txt \
+--output-path demux/demux_run3.qza
+```
+- this command worked 
+- 
