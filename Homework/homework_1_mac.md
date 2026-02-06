@@ -125,7 +125,7 @@ Fill in the blank to denoise your samples based on what you think should be trim
 - 
 ```
 #cd demux
-cd dada2?
+cd dada2
 
 qiime dada2 denoise-paired \
 --i-demultiplexed-seqs ../demux/demux_cow.qza \
