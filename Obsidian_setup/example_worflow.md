@@ -29,7 +29,7 @@ module load qiime2/2024.10_amplicon
 
 I then like to put the date I worked on something so for example :
 
-2/1/2026
+2/1/2026 
 ### Demultiplexing 
 ```
 command for demultiplexing

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Decomp_tutorial.md",
+                "file": "Obsidian_setup/example_worflow.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Decomp_tutorial"
+              "title": "example_worflow"
             }
           }
         ]
@@ -186,10 +186,10 @@
   },
   "active": "d510ea423a9d328f",
   "lastOpenFiles": [
+    "Obsidian_setup/Example_Obsidian_Note.md",
+    "Decomp_tutorial.md",
     "Obsidian_setup/example_worflow.md",
     "Obsidian_setup/Git_Obsidian_Setup.md",
-    "Decomp_tutorial.md",
-    "Obsidian_setup/Example_Obsidian_Note.md",
     "Module3/demux_denoise_submit_scripts.md",
     "Homework/homework_1_mac.md",
     "Module3",
