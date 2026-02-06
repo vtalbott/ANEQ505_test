@@ -3,7 +3,7 @@ I like to include a little about what I am working on.
 
 #### Working directory 
 ```
-/scratch/alpine/USER/aneq505
+/scratch/alpine/USER/decomp_tutorial
 ```
 
 #### Class reservation 
