@@ -25,12 +25,14 @@
             "id": "1b50b10c6f3be7fd",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.11.7"
+                "file": "Homework/homework_1_mac.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.7"
+              "icon": "lucide-file",
+              "title": "homework_1_mac"
             }
           }
         ],
@@ -91,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "d8a9feb09b182743",
@@ -200,10 +201,10 @@
   },
   "active": "1b50b10c6f3be7fd",
   "lastOpenFiles": [
+    "Homework/homework_1_PC.md",
     "Homework/homework_2_PC.md",
     "Homework/homework_2_mac.md",
     "Homework/homework_2_answers.md",
-    "Homework/homework_1_PC.md",
     "Homework/homework_1_mac.md",
     "Decomp_tutorial.md",
     "Obsidian_setup/example_worflow.md",
