@@ -18,58 +18,62 @@ Due:
 First get the Greengenes2 database:
 
 ```
-wget \ ### add the reference here###
+cd /scratch/alpine/$USER/cow/taxonomy`
+```
+
+```
+wget --no-check-certificate https://ftp.microbio.me/greengenes_release/2024.09/2024.09.backbone.v4.nb.qza
 ```
 
 ```
 qiime feature-classifier classify-sklearn \
---i-reads <YourRepresentativeSequencesFile.qza> \
+--i-reads ../dada2/<YourRepresentativeSequencesFile.qza> \
 --i-classifier gg-13-8-99-515-806-nb-classifier.qza \
---o-classification taxonomy.qza
+--o-classification taxonomy_gg2.qza
 ```
            
 ```
 #visualize the taxonomy of your unfiltered table:
 
 qiime metadata tabulate \
---m-input-file taxonomy.qza \
---o-visualization taxonomy.qzv
+--m-input-file taxonomy_gg2.qza \
+--o-visualization taxonomy_gg2.qzv
 ```
 
 ```
 #visualize the taxonomy in taxa bar plots:
 
 qiime taxa barplot \
---i-table <YourDenoisedTable.qza> \
---i-taxonomy taxonomy.qza \
---m-metadata-file metadata.txt \
---o-visualization taxa_barplot_unfiltered_16S.qzv
+--i-table ../dada2/<YourDenoisedTable.qza> \
+--i-taxonomy taxonomy_gg2.qza \
+--m-metadata-file ../metadata/cow_metadata.txt \
+--o-visualization ../taxaplots/taxa_barplot_unfiltered_gg2.qzv
 ```
 
 ```
-#filter mitochondria and chloroplast, fill in the blank (--p-exclude) to exclude these DNA
+#filter mitochondria, chloroplast, and sp004296775, fill in the blank (--p-exclude) to exclude these DNA
 
 qiime taxa filter-table \
---i-table <YourDenoisedTable.qza> \
+--i-table ../dada2/<YourDenoisedTable.qza> \
 --i-taxonomy taxonomy.qza \
 --p-exclude <WhatToExclude> \
---o-filtered-table dada2_table-no-mito-no-chloro_16S.qza
+--o-filtered-table ../dada2/dada2_table_nomitochloro_gg2.qza
 ```
 
 
 ```
 qiime taxa barplot \
---i-table dada2_table-no-mito-no-chloro_16S.qza \
+--i-table ../dada2/dada2_table_nomitochloro_gg2.qza \
 --i-taxonomy taxonomy.qza \
---m-metadata-file metadata.txt \
---o-visualization dada2_table-no-mito-no-chloro_16S.qzv
+--m-metadata-file ../metadata/cow_metadata.txt \
+--o-visualization ../taxaplot/taxa_barplot_nomitochloro_gg2.qzv
 ```
 
 2.    Final taxa bar plot
 	* Questions: what’s the most abundant ASV in X sample.
 
 3.    Phylogenetic tree
-	* Create another job script to run the phylogenetic tree building.
+	* In your **slurm** directory create another job script to run the phylogenetic tree building.
 
 ```
 #!/bin/bash
@@ -85,10 +89,10 @@ qiime taxa barplot \
 
 #Activate qiime
 module purge
-module load  ###qiime2-2023.5###
+module load qiime2/2024.10_amplicon
 
 #Get gg2 reference backbone
-wget \ ###put in gg2 backbone###
+wget --no-check-certificate https://ftp.microbio.me/greengenes_release/2022.10/2022.10.backbone.sepp-reference.qza
 
 #Command
 qiime fragment-insertion sepp \
