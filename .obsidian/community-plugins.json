@@ -1,5 +1,7 @@
 [
   "obsidian-git",
   "fast-text-color",
-  "highlightr-plugin"
+  "highlightr-plugin",
+  "obsidian-dynamic-highlights",
+  "open-vscode"
 ]
