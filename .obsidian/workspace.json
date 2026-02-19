@@ -185,10 +185,50 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d510ea423a9d328f",
+  "floating": {
+    "id": "3fe5b9a4b0a9d9ff",
+    "type": "floating",
+    "children": [
+      {
+        "id": "4ea9af1f594a770b",
+        "type": "window",
+        "children": [
+          {
+            "id": "7243ef4ffef96790",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "38bdeff45c61b740",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Homework/homework_2_answers.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "homework_2_answers"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 52,
+        "y": 42,
+        "width": 691,
+        "height": 760,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "38bdeff45c61b740",
   "lastOpenFiles": [
-    "Homework/homework_1_mac.md",
     "Homework/homework_2_mac.md",
+    "Homework/homework_2_answers.md",
+    "Homework/homework_1_mac.md",
     "Decomp_tutorial.md",
     "Obsidian_setup/example_worflow.md",
     "Obsidian_setup/Example_Obsidian_Note.md",

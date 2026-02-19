@@ -74,14 +74,18 @@ qiime taxa barplot \
 
 3.    Phylogenetic tree
 	* In your **slurm** directory create another job script to run the phylogenetic tree building.
+	
+```
+nano <YourJobName.sh>
+```
 
 ```
 #!/bin/bash
-#SBATCH --job-name=denoise
+#SBATCH --job-name=sepp_tree
 #SBATCH --nodes=1
 #SBATCH --ntasks=47
 #SBATCH --partition=amilan
-#SBATCH --time=02:00:00
+#SBATCH --time=04:00:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=<YourEmail>@colostate.edu
 #SBATCH --output=slurm-%j.out
@@ -91,15 +95,16 @@ qiime taxa barplot \
 module purge
 module load qiime2/2024.10_amplicon
 
-#Get gg2 reference backbone
-wget --no-check-certificate https://ftp.microbio.me/greengenes_release/2022.10/2022.10.backbone.sepp-reference.qza
+#Get reference
+wget --no-check-certificate \ -P ../tree \ https://ftp.microbio.me/greengenes_release/2022.10/2022.10.backbone.sepp-reference.qza
+
 
 #Command
 qiime fragment-insertion sepp \
---i-representative-sequences rep-seqs-dada2.qza \
---i-reference-database sepp-refs-gg-13-8.qza \
---o-tree tree_16S.qza \
---o-placements tree_placements_16S.qza
+--i-representative-sequences ../dada2/<YourRepresentativeSequencesFile.qza> \
+--i-reference-database ../tree/2022.10.backbone.sepp-reference.qza \
+--o-tree ../tree/tree_gg2.qza \
+--o-placements ../tree/tree_placements_gg2.qza
 ```
 
 ```
