@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "homework_2_answers"
             }
+          },
+          {
+            "id": "1b50b10c6f3be7fd",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.7"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -185,7 +198,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1efe2420eaecdff8",
+  "active": "1b50b10c6f3be7fd",
   "lastOpenFiles": [
     "Homework/homework_2_PC.md",
     "Homework/homework_2_mac.md",
