@@ -16,7 +16,7 @@ wget --no-check-certificate https://ftp.microbio.me/greengenes_release/2024.09/2
 ```
 qiime feature-classifier classify-sklearn \
 --i-reads ../dada2/seqs_cow.qza \
---i-classifier gg-13-8-99-515-806-nb-classifier.qza \
+--i-classifier 2024.09.backbone.v4.nb.qza \
 --o-classification taxonomy_gg2.qza
 ```
 
@@ -46,15 +46,15 @@ Add in the two commands needed to filter mitochondria and chloroplasts out of th
 
 qiime taxa filter-table \
 --i-table ../dada2/table_cow.qza \
---i-taxonomy taxonomy.qza \
+--i-taxonomy taxonomy_gg2.qza \
 --p-exclude mitochondria,chloroplast,sp004296775 \
---o-filtered-table ../dada2/dada2_table_nomitochloro_gg2.qza
+--o-filtered-table ../dada2/table_nomitochloro_gg2.qza
 ```
 
 ```
 qiime taxa barplot \
---i-table ../dada2/dada2_table_nomitochloro_gg2.qza \
---i-taxonomy taxonomy.qza \
+--i-table ../dada2/table_nomitochloro_gg2.qza \
+--i-taxonomy taxonomy_gg2.qza \
 --m-metadata-file ../metadata/cow_metadata.txt \
 --o-visualization ../taxaplot/taxa_barplot_nomitochloro_gg2.qzv
 ```

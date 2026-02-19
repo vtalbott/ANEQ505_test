@@ -35,45 +35,28 @@ wget --no-check-certificate https://ftp.microbio.me/greengenes_release/2024.09/2
 
 Assign taxonomy to your unfiltered table:
 ```
-qiime feature-classifier classify-sklearn \
---i-reads ../dada2/<YourRepresentativeSequencesFile.qza> \
---i-classifier gg-13-8-99-515-806-nb-classifier.qza \
---o-classification taxonomy_gg2.qza
+qiime feature-classifier classify-sklearn \--i-reads ../dada2/<YourRepresentativeSequencesFile.qza> \--i-classifier 2024.09/2024.09.backbone.v4.nb.qza \--o-classification taxonomy_gg2.qza
 ```
 
 Visualize the taxonomy of your unfiltered table:
 ```
-qiime metadata tabulate \
---m-input-file taxonomy_gg2.qza \
---o-visualization taxonomy_gg2.qzv
+qiime metadata tabulate \--m-input-file taxonomy_gg2.qza \--o-visualization taxonomy_gg2.qzv
 ```
 
 Visualize the taxonomy in taxa bar plots:
 ```
-qiime taxa barplot \
---i-table ../dada2/<YourDenoisedTable.qza> \
---i-taxonomy taxonomy_gg2.qza \
---m-metadata-file ../metadata/cow_metadata.txt \
---o-visualization ../taxaplots/taxa_barplot_unfiltered_gg2.qzv
+qiime taxa barplot \--i-table ../dada2/<YourDenoisedTable.qza> \--i-taxonomy taxonomy_gg2.qza \--m-metadata-file ../metadata/cow_metadata.txt \--o-visualization ../taxaplots/taxa_barplot_unfiltered_gg2.qzv
 ```
 
 Next filter your dada2 table
 * filter mitochondria, chloroplast, and sp004296775, fill in the blank (--p-exclude) to exclude these DNA
 ```
-qiime taxa filter-table \
---i-table ../dada2/<YourDenoisedTable.qza> \
---i-taxonomy taxonomy.qza \
---p-exclude <WhatToExclude> \
---o-filtered-table ../dada2/dada2_table_nomitochloro_gg2.qza
+qiime taxa filter-table \--i-table ../dada2/<YourDenoisedTable.qza> \--i-taxonomy taxonomy_gg2.qza \--p-exclude <WhatToExclude> \--o-filtered-table ../dada2/table_nomitochloro_gg2.qza
 ```
 
 
 ```
-qiime taxa barplot \
---i-table ../dada2/dada2_table_nomitochloro_gg2.qza \
---i-taxonomy taxonomy.qza \
---m-metadata-file ../metadata/cow_metadata.txt \
---o-visualization ../taxaplot/taxa_barplot_nomitochloro_gg2.qzv
+qiime taxa barplot \--i-table ../dada2/dada2_table_nomitochloro_gg2.qza \--i-taxonomy taxonomy.qza \--m-metadata-file ../metadata/cow_metadata.txt \--o-visualization ../taxaplot/taxa_barplot_nomitochloro_gg2.qzv
 ```
 
 **Filtered Taxa Bar Plot Questions:**
@@ -113,11 +96,7 @@ wget --no-check-certificate \ -P ../tree \ https://ftp.microbio.me/greengenes_re
 
 
 #Command
-qiime fragment-insertion sepp \
---i-representative-sequences ../dada2/<YourRepresentativeSequencesFile.qza> \
---i-reference-database ../tree/2022.10.backbone.sepp-reference.qza \
---o-tree ../tree/tree_gg2.qza \
---o-placements ../tree/tree_placements_gg2.qza
+qiime fragment-insertion sepp \--i-representative-sequences ../dada2/<YourRepresentativeSequencesFile.qza> \--i-reference-database ../tree/2022.10.backbone.sepp-reference.qza \--o-tree ../tree/tree_gg2.qza \--o-placements ../tree/tree_placements_gg2.qza
 ```
 
 * exit out of the file by clicking control+X and save the file.

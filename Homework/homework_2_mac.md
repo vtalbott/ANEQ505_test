@@ -37,7 +37,7 @@ Assign taxonomy to your unfiltered table:
 ```
 qiime feature-classifier classify-sklearn \
 --i-reads ../dada2/<YourRepresentativeSequencesFile.qza> \
---i-classifier gg-13-8-99-515-806-nb-classifier.qza \
+--i-classifier 2024.09/2024.09.backbone.v4.nb.qza \
 --o-classification taxonomy_gg2.qza
 ```
 
@@ -62,9 +62,9 @@ Next filter your dada2 table
 ```
 qiime taxa filter-table \
 --i-table ../dada2/<YourDenoisedTable.qza> \
---i-taxonomy taxonomy.qza \
+--i-taxonomy taxonomy_gg2.qza \
 --p-exclude <WhatToExclude> \
---o-filtered-table ../dada2/dada2_table_nomitochloro_gg2.qza
+--o-filtered-table ../dada2/table_nomitochloro_gg2.qza
 ```
 
 
