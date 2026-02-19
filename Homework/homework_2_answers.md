@@ -56,7 +56,7 @@ qiime taxa barplot \
 --i-table ../dada2/table_nomitochloro_gg2.qza \
 --i-taxonomy taxonomy_gg2.qza \
 --m-metadata-file ../metadata/cow_metadata.txt \
---o-visualization ../taxaplot/taxa_barplot_nomitochloro_gg2.qzv
+--o-visualization ../taxaplots/taxa_barplot_nomitochloro_gg2.qzv
 ```
 
 Filtered Taxa Bar Plot Questions
@@ -69,21 +69,19 @@ _Question 3: What highly abundant ASV is shared between both the udder and skin 
 
 2.    Phylogenetic tree
 
-Create a job script to run the phylogenetic tree building. Remember you must start a new terminal session, navigate to your working directory, and then submit the job. This job will take about an hour.
+Create a job script to run the phylogenetic tree building. Remember you must start a new terminal session, navigate to your slurm directory, and then submit the job. This job will take about an hour.
 
 ```
 nano tree.sh
 ```
 
 ```
-#paste the following filled-in code into the new job script file
-
 #!/bin/bash
 #SBATCH --job-name=tree
 #SBATCH --nodes=1
 #SBATCH --ntasks=8
 #SBATCH --partition=amilan
-#SBATCH --time=02:00:00
+#SBATCH --time=04:00:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=lindsval@colostate.edu
 #SBATCH --output=slurm-%j.out
@@ -97,13 +95,13 @@ module purge
 module load qiime2/2024.10_amplicon
 
 #Get reference
-wget --no-check-certificate \ -P ../tree \ https://ftp.microbio.me/greengenes_release/2022.10/2022.10.backbone.sepp-reference.qza
+wget --no-check-certificate -P ../tree https://ftp.microbio.me/greengenes_release/2022.10/2022.10.backbone.sepp-reference.qza
 
 #Command
 qiime fragment-insertion sepp \
 --i-representative-sequences ../dada2/seqs_cow.qza \
 --i-reference-database ../tree/2022.10.backbone.sepp-reference.qza \
---o-tree ../tree/tree_16S.qza \
+--o-tree ../tree/tree_gg2.qza \
 --o-placements ../tree/tree_placements_gg2.qza
 ```
 

@@ -70,10 +70,10 @@ qiime taxa filter-table \
 
 ```
 qiime taxa barplot \
---i-table ../dada2/dada2_table_nomitochloro_gg2.qza \
---i-taxonomy taxonomy.qza \
+--i-table ../dada2/table_nomitochloro_gg2.qza \
+--i-taxonomy taxonomy_gg2.qza \
 --m-metadata-file ../metadata/cow_metadata.txt \
---o-visualization ../taxaplot/taxa_barplot_nomitochloro_gg2.qzv
+--o-visualization ../taxaplots/taxa_barplot_nomitochloro_gg2.qzv
 ```
 
 **Filtered Taxa Bar Plot Questions:**
@@ -93,7 +93,7 @@ nano <YourJobName.sh>
 
 ```
 #!/bin/bash
-#SBATCH --job-name=sepp_tree
+#SBATCH --job-name=tree
 #SBATCH --nodes=1
 #SBATCH --ntasks=47
 #SBATCH --partition=amilan
@@ -109,7 +109,7 @@ nano <YourJobName.sh>
 
 
 #Get reference
-wget --no-check-certificate \ -P ../tree \ https://ftp.microbio.me/greengenes_release/2022.10/2022.10.backbone.sepp-reference.qza
+wget --no-check-certificate -P ../tree https://ftp.microbio.me/greengenes_release/2022.10/2022.10.backbone.sepp-reference.qza
 
 
 #Command
