@@ -26,7 +26,7 @@ Load qiime2
 First get the Greengenes2 database:
 
 ```
-cd /scratch/alpine/$USER/cow/taxonomy`
+cd /scratch/alpine/$USER/cow/taxonomy
 ```
 
 ```
