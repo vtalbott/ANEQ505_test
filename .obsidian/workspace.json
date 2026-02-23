@@ -59,8 +59,7 @@
               "title": "Pasted image 20260119102237"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -223,10 +222,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2ddc95098d545091",
+  "active": "7f0dc65b46c75874",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "Module1/Images/Pasted image 20260119102237.png",
+    "conflict-files-obsidian-git.md",
     "example_worflow.md",
     "Decomp_tutorial.md",
     "Obsidian_setup/example_worflow.md",
