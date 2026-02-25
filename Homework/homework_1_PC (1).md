@@ -61,7 +61,7 @@ ainteractive --ntasks=6 --time=02:00:00
 
 ```
 
-
+- 1 pt
 6.    Import the sequences/reads into a Qiime2-readable format (.qza). Note this might take 10-20 mins
 
 ```
@@ -113,22 +113,22 @@ Fill in the blank to denoise your samples based on what you think should be trim
 ```
 cd ADD PATH TO DADA2 DIRECTORY
 
-qiime dada2 denoise-paired \--i-demultiplexed-seqs ../demux/cow_demux.qza \--p-trim-left-f 0 \--p-trim-left-r 0 \--p-trunc-len-f 250 \--p-trunc-len-r 250 \--o-representative-sequences cow_seqs_dada2.qza \--o-denoising-stats cow_dada2_stats.qza \--o-table cow_table_dada2.qza
+qiime dada2 denoise-paired \--i-demultiplexed-seqs ../demux/cow_demux.qza \--p-trim-left-f NUMBER \--p-trim-left-r NUMBER \--p-trunc-len-f NUMBER \--p-trunc-len-r NUMBER \--o-representative-sequences cow_seqs_dada2.qza \--o-denoising-stats cow_dada2_stats.qza \--o-table cow_table_dada2.qza
 
 #Visualize the denoising results:
-qiime metadata tabulate \--m-input-file cow_dada2_stats.qza \--o-visualization YOUR_OUTPUT_FILENAME_HERE.qzv
+qiime metadata tabulate \--m-input-file cow_dada2_stats.qza \--o-visualization YOUR_OUTPUT_FILENAME_HERE.qzv
 
 qiime feature-table summarize \--i-table cow_table_dada2.qza \--m-sample-metadata-file ../metadata/cow_metadata.txt \--o-visualization YOUR_OUTPUT_FILENAME_HERE.qzv
 
 qiime feature-table tabulate-seqs \--i-data cow_seqs_dada2.qza \--o-visualization YOUR_OUTPUT_FILENAME_HERE.qzv
 ```
-
+4 pts
 	
 Briefly **describe** the key information from each denoising output file:
 1. Representative Sequences
 2. Denoising Stats
 3. Denoised Table
-
+3 pts
 **Answer the following questions:**  
 1. Where does the median Q-score begin to dip below Q30 for the forward reads and the reverse reads?
 2. What is the mean reads per sample?
@@ -136,6 +136,10 @@ Briefly **describe** the key information from each denoising output file:
 4. What is the maximum length of all your sequences?
 5. Which sample (not including extraction controls starting with EC) lost the highest % of reads?
 6. Why did you chose to trim or truncate where you did?
-
+5 pts 
 **To submit your homework from this document:**
 write all of your commands here, then use command+P (for mac) or control+P (for windows) and search Git: commit. click it. then search for Git: Push and click it. go to your github online to check that it pushed correctly. we will check your github for homework credit. 
+
+15 pts total 
+
+
