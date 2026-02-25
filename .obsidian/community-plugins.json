@@ -3,5 +3,9 @@
   "fast-text-color",
   "highlightr-plugin",
   "open-vscode",
+<<<<<<< HEAD
   "obsidian-dynamic-highlights"
+=======
+  "color-cycler"
+>>>>>>> origin/main
 ]
