@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "355f404175ddc672",
+        "id": "7710ec5ee5dec553",
         "type": "tabs",
         "children": [
           {
-            "id": "f93f59d01f1d2343",
+            "id": "88133a069824b453",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "conflict-files-obsidian-git"
+              "title": "New tab"
             }
           }
         ]
@@ -185,13 +181,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f93f59d01f1d2343",
+  "active": "88133a069824b453",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
     "Homework/homework_2_answers.md",
     "Homework/homework_1_mac.md",
     "Homework/Homework 1 Rubric.md",
     "Homework/homework_1_PC.md",
-    "conflict-files-obsidian-git.md",
     "Homework/homework_1_PC (1).md",
     "VS Code test.md",
     "Homework/homework_2_PC.md",
