@@ -55,8 +55,9 @@ cp -r /pl/active/courses/2024_summer/maw_2024/raw_reads .
 #launch an interactive session: 
 ainteractive --ntasks=6 --time=02:00:00
 
-#insert your code here to activate qiime. Hint: there should be 2 things you add here
-
+# load qiime2
+module purge
+module load qiime2/2026.1_amplicon
 
 ```
 
@@ -82,7 +83,7 @@ a.    Go into your slurm directory using OnDemand. Create a new file named **
 #SBATCH --nodes=1
 #SBATCH --ntasks=12
 #SBATCH --partition=amilan
-#SBATCH --time=02:00:00
+#SBATCH --time=04:00:00
 #SBATCH --mail-type=ALL
 #SBATCH --output=slurm-%j.out
 #SBATCH --qos=normal
@@ -90,10 +91,10 @@ a.    Go into your slurm directory using OnDemand. Create a new file named **
 
 #Load Qiime2
 module purge
-module load qiime2/2024.10_amplicon
+module load qiime2/2026.1_amplicon
 
 #change the following line if your file path looks different
-cd /scratch/alpine/$USER/cow_test/demux
+cd /scratch/alpine/$USER/cow_qiime2026.1/demux
 
 #Below is the command you will run to demultiplex the samples.
 
@@ -102,14 +103,14 @@ qiime demux emp-paired \
 --m-barcodes-column barcode \
 --p-rev-comp-mapping-barcodes \
 --p-rev-comp-barcodes \
---i-seqs ../cow_reads.qza \ #added the ../ to correct dir
---o-per-sample-sequences ../demux/demux_cow.qza \ # see note above
---o-error-correction-details ../demux/cow_demux_error.qza # see note above
+--i-seqs ../cow_reads.qza \
+--o-per-sample-sequences demux_cow.qza \
+--o-error-correction-details cow_demux_error.qza
 
 #visualize the read quality
 qiime demux summarize \
---i-data ../demux/demux_cow.qza \ #changed directory path
---o-visualization ../demux/demux_cow.qzv # see note above
+--i-data demux_cow.qza \ 
+--o-visualization demux_cow.qzv 
 ```
 
 
