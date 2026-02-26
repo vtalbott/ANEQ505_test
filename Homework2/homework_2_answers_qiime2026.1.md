@@ -47,9 +47,9 @@ qiime feature-table summarize \
 # new command
 qiime feature-table summarize \
   --i-table cow_table_dada2_filtered300.qza \
-  --o-feature-frequencies feature-frequencies_filtered.qza \
-  --o-sample-frequencies sample-frequencies.qza \
-  --o-summary dada2_visual_summary.qzv
+  --o-feature-frequencies feature-frequencies_filtered300.qza \
+  --o-sample-frequencies sample-frequencies_filtered300.qza \
+  --o-summary dada2_visual_summary_filtered300.qzv
 ```
 
 ## Classify taxonomy using GreenGenes2
@@ -147,7 +147,7 @@ tree.sh
 #Activate qiime
 #Insert the two commands you need to load qiime2
 module purge
-module load qiime2/2024.10_amplicon
+module load qiime2/2026.1_amplicon
 
 #Get reference tree (gg2)
 wget --no-check-certificate -P ../tree https://ftp.microbio.me/greengenes_release/2022.10/2022.10.backbone.sepp-reference.qza
