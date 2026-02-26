@@ -146,12 +146,12 @@ qiime metadata tabulate \
 --o-visualization cow_dada2_stats.qzv
 
 
-#will probably have to replace the above command with this 
+#will probably have to replace the below command with this 
 qiime feature-table summarize \
-  --i-table dada2/table_transport.qza \
-  --o-feature-frequencies dada2/feature-frequencies.qza \
-  --o-sample-frequencies dada2/sample-frequencies.qza \
-  --o-summary dada2/dada2_visual_summary.qzv
+  --i-table cow_table_dada2.qza \
+  --o-feature-frequencies feature-frequencies.qza \
+  --o-sample-frequencies sample-frequencies.qza \
+  --o-summary dada2_visual_summary.qzv
 
 qiime feature-table summarize \
 --i-table cow_table_dada2.qza \
