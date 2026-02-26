@@ -36,12 +36,20 @@ qiime feature-table filter-features \
 --i-table cow_table_dada2.qza \
 --m-metadata-file cow_seqs_dada2_filtered300.qza \
 --o-filtered-table cow_table_dada2_filtered300.qza
-  
+ 
+# this qiime2 feature table summarize no longer works replace with new command 
 qiime feature-table summarize \
 --i-table cow_table_dada2_filtered300.qza \
 --m-sample-metadata-file ../metadata/cow_metadata.txt \
 --o-visualization cow_table_dada2_filtered300.qzv
-    
+   
+   
+# new command
+qiime feature-table summarize \
+  --i-table cow_table_dada2_filtered300.qza \
+  --o-feature-frequencies feature-frequencies_filtered.qza \
+  --o-sample-frequencies sample-frequencies.qza \
+  --o-summary dada2_visual_summary.qzv
 ```
 
 ## Classify taxonomy using GreenGenes2

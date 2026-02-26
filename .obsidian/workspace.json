@@ -49,7 +49,8 @@
               "title": "homework_2_answers_rubric"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -214,11 +215,11 @@
       "color-cycler:Cycle accent color": false
     }
   },
-  "active": "7f0dc65b46c75874",
+  "active": "1e575c61c3438d1e",
   "lastOpenFiles": [
-    "Homework2/homework_2_answers_qiime2026.1.md",
     "Homework2/homework_2_answers_rubric.md",
     "Homework/homework_1_mac_qiime_2026.1.md",
+    "Homework2/homework_2_answers_qiime2026.1.md",
     "Homework/homework_1_mac.md",
     "Homework/homework_2_mac.md",
     "Obsidian_setup/VS_code_in_obsidian.md",
