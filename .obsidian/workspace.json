@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian_setup/VS_code_in_obsidian.md",
+                "file": "Module 6/Tutorial test code.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "VS_code_in_obsidian"
+              "title": "Tutorial test code"
             }
           }
         ],
@@ -201,15 +201,16 @@
       "color-cycler:Cycle accent color": false
     }
   },
-  "active": "b9c6b380112d5bce",
+  "active": "1e575c61c3438d1e",
   "lastOpenFiles": [
+    "Homework/homework_1_PC (1).md",
+    "Module 6/Tutorial test code.md",
+    "Module 6",
+    "Obsidian_setup/VS_code_in_obsidian.md",
     "Notes.md",
     "Homework/Homework 1 Rubric.md",
     "VS Code test.md",
-    "Obsidian_setup/VS_code_in_obsidian.md",
-    "Untitled",
     "Homework/homework_2_mac.md",
-    "Homework/homework_1_PC (1).md",
     "Decomp_tutorial.md",
     "Example.md",
     "README.md",
