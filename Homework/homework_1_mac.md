@@ -70,7 +70,7 @@ qiime tools import \
 --input-path raw_reads \
 --output-path cow_reads.qza
 ```
-
+- did come get this message /curc/sw/install/bio/qiime2/2026.1/2026.1_amplicon_env/lib/python3.10/site-packages/unifrac/__init__.py:9: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81. import pkg_resources
 
 7.    Demultiplex the reads by submitting a job. Note this may take ~30 mins
 
@@ -125,7 +125,6 @@ Fill in the blank to denoise your samples based on what you think should be trim
 - Are we running from demux or from dada2?
 - 
 ```
-#cd demux
 cd dada2
 
 qiime dada2 denoise-paired \
