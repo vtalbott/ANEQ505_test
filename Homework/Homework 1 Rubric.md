@@ -146,3 +146,15 @@ Briefly **describe** the key information from each denoising output file:
 4. Which sample (not including extraction controls starting with EC) lost the highest % of reads?
 5. Why did you chose to trim or truncate where you did?
 ~={red}5 pts=~
+
+
+```
+qiime feature-table filter-samples \
+--i-table dada2/table_type_days_nomitochloro.qza \
+--m-metadata-file metadata/metadata.txt \
+--o-filtered-table dada2/table_type_days_nomitochloro_filtered.qza
+```
+
+```
+
+```
