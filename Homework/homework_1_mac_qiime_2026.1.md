@@ -109,8 +109,8 @@ qiime demux emp-paired \
 
 #visualize the read quality
 qiime demux summarize \
---i-data ../demux/demux_cow.qza \ #changed directory path
---o-visualization ../demux/demux_cow.qzv # see note above
+--i-data demux_cow.qza \
+--o-visualization demux_cow.qzv
 ```
 
 
@@ -137,7 +137,8 @@ qiime dada2 denoise-paired \
 --p-n-threads 6 \
 --o-representative-sequences cow_seqs_dada2.qza \
 --o-denoising-stats cow_dada2_stats.qza \
---o-table cow_table_dada2.qza
+--o-table cow_table_dada2.qza \
+--o-base-transition-stats base-transition-stats.qza
 
 #Visualize the denoising results:
 qiime metadata tabulate \
@@ -153,7 +154,7 @@ qiime feature-table tabulate-seqs \
 --i-data cow_seqs_dada2.qza \
 --o-visualization cow_seqs_dada2.qzv
 ```
-
+had to add this flag ~={red} --o-base-transition-stats ../dada2/base-transition-stats.qza=~
 	
 Briefly **describe** the key information from each denoising output file:
 1. Representative Sequences
