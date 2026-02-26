@@ -6,7 +6,7 @@
 4. Find and install Open vault in VS Code
 5. Enable Open Vault in VS Code plug in
 6. Now open VS code 
-7. Open the command panel (CMD + Shift + P)
+7. Open the command panel (CMD + Shift + P) in VS Code
 8. Type  ``` Shell Command: Install 'code' command in PATH ```
 9. You will get a confirmation message
 10. Open a terminal

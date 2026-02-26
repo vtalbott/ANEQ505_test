@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Module 6/Tutorial test code.md",
+                "file": "Obsidian_setup/VS_code_in_obsidian.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tutorial test code"
+              "title": "VS_code_in_obsidian"
             }
           }
         ],
@@ -203,8 +203,8 @@
   },
   "active": "1e575c61c3438d1e",
   "lastOpenFiles": [
-    "Homework/homework_1_PC (1).md",
     "Module 6/Tutorial test code.md",
+    "Homework/homework_1_PC (1).md",
     "Module 6",
     "Obsidian_setup/VS_code_in_obsidian.md",
     "Notes.md",
