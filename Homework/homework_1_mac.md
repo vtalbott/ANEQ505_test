@@ -109,8 +109,8 @@ qiime demux emp-paired \
 
 #visualize the read quality
 qiime demux summarize \
---i-data demux_cow.qza \ 
---o-visualization demux_cow.qzv 
+--i-data demux_cow.qza \
+--o-visualization demux_cow.qzv
 ```
 
 
