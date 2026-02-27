@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homework2/homework_2_mac_VS.md",
+                "file": "Homework2/homework_2_PC_VS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "homework_2_mac_VS"
+              "title": "homework_2_PC_VS"
             }
           }
         ],
@@ -216,8 +216,8 @@
   },
   "active": "f6b8b7659db1e0bc",
   "lastOpenFiles": [
-    "Homework2/homework_2_PC_VS.md",
     "Homework2/homework_2_mac_VS.md",
+    "Homework2/homework_2_PC_VS.md",
     "Homework2/homework_2_answers_rubric.md",
     "Homework2/homework_2_answers_qiime2026.1.md",
     "Homework/homework_2_mac.md",
