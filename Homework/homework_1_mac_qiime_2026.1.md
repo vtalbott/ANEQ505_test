@@ -109,8 +109,8 @@ qiime demux emp-paired \
 
 #visualize the read quality
 qiime demux summarize \
---i-data ../demux/demux_cow.qza \ #changed directory path
---o-visualization ../demux/demux_cow.qzv # see note above
+--i-data demux_cow.qza \
+--o-visualization demux_cow.qzv
 ```
 
 
@@ -137,24 +137,29 @@ qiime dada2 denoise-paired \
 --p-n-threads 6 \
 --o-representative-sequences cow_seqs_dada2.qza \
 --o-denoising-stats cow_dada2_stats.qza \
---o-table cow_table_dada2.qza
+--o-table cow_table_dada2.qza \
+--o-base-transition-stats base-transition-stats.qza
 
 #Visualize the denoising results:
 qiime metadata tabulate \
 --m-input-file cow_dada2_stats.qza \
 --o-visualization cow_dada2_stats.qzv
 
+
+#new visualization command
 qiime feature-table summarize \
---i-table cow_table_dada2.qza \
---m-sample-metadata-file ../metadata/cow_metadata.txt \
---o-visualization cow_table_dada2.qzv
+  --i-table cow_table_dada2.qza \
+  --o-feature-frequencies feature-frequencies.qza \
+  --o-sample-frequencies sample-frequencies.qza \
+  --o-summary dada2_visual_summary.qzv
 
 qiime feature-table tabulate-seqs \
 --i-data cow_seqs_dada2.qza \
 --o-visualization cow_seqs_dada2.qzv
 ```
+had to add this flag ~={red} --o-base-transition-stats ../dada2/base-transition-stats.qza=~
+- ~={red}the second command replaces one of the previous commands=~
 
-	
 Briefly **describe** the key information from each denoising output file:
 1. Representative Sequences
 2. Denoising Stats

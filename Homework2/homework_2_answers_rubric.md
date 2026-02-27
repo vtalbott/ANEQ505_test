@@ -23,8 +23,8 @@ module load qiime2/2024.10_amplicon
 cd /scratch/alpine/$USER/cow/dada2
 
 qiime feature-table filter-seqs \
-    --i-data cow_seqs_dada2.qza \
-    --m-metadata-file cow_seqs_dada2.qza \
+    --i-data seqs_cow.qza \
+    --m-metadata-file seqs_cow.qza \
     --p-where 'length(sequence) < 300' \
     --o-filtered-data cow_seqs_dada2_filtered300.qza
 
@@ -33,7 +33,7 @@ qiime feature-table tabulate-seqs \
 --o-visualization cow_seqs_dada2_filtered300.qzv
 
 qiime feature-table filter-features \
---i-table cow_table_dada2.qza \
+--i-table table_cow.qza \
 --m-metadata-file cow_seqs_dada2_filtered300.qza \
 --o-filtered-table cow_table_dada2_filtered300.qza
   

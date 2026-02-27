@@ -1,6 +1,6 @@
 **ANEQ Class Assignment #2: Practice Qiime2 Workflow**
 
-Due:
+Due: March 6th
 
 **For complete credit for this assignment, you must answer all questions and include all commands in your obsidian upload.**
 
