@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homework2/homework_2_mac_VS.md",
+                "file": "Homework3/homework_3_answers_and_rubric.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "homework_2_mac_VS"
+              "title": "homework_3_answers_and_rubric"
             }
           },
           {
@@ -217,8 +217,13 @@
   },
   "active": "1e575c61c3438d1e",
   "lastOpenFiles": [
-    "Homework2/homework_2_answers_rubric.md",
     "Homework2/homework_2_mac_VS.md",
+    "Homework3/homework_3_pc.md",
+    "Homework3/homework_3_mac.md",
+    "Homework3/homework_3_answers_and_rubric.md",
+    "Homework3",
+    "untitled folder",
+    "Homework2/homework_2_answers_rubric.md",
     "Homework2/homework_2_PC_VS.md",
     "Homework2/homework_2_answers_qiime2026.1.md",
     "tree_gg2_placements.qza",
@@ -230,8 +235,6 @@
     "8367ddc3-df17-4e3c-b640-e253848d0463/provenance/artifacts/a21b47bf-693b-49d4-a6aa-1274789aee28/action/action.yaml",
     "8367ddc3-df17-4e3c-b640-e253848d0463/provenance/artifacts/9e8f6bb7-1444-4e32-b5fd-92cd5823d3ee/action/action.yaml",
     "8367ddc3-df17-4e3c-b640-e253848d0463/provenance/artifacts/1b1bf609-a9fc-4292-9ace-2913561f1b17/action/action.yaml",
-    "8367ddc3-df17-4e3c-b640-e253848d0463/provenance/artifacts/df554f35-7016-465f-8373-8c2b7b56bfe6/metadata.yaml",
-    "8367ddc3-df17-4e3c-b640-e253848d0463/provenance/artifacts/df554f35-7016-465f-8373-8c2b7b56bfe6/citations.bib",
     "Homework/homework_1_mac_qiime_2026.1.md",
     "Homework/homework_1_mac.md",
     "Homework/homework_2_mac.md",
@@ -252,8 +255,6 @@
     "Homework/homework_1_PC.md",
     "example_worflow.md",
     "Obsidian_setup/example_worflow.md",
-    "Obsidian_setup/Git_Obsidian_Setup.md",
-    "Obsidian_setup/Example_Obsidian_Note.md",
     "Module1/Images/Pasted image 20260119102959.png",
     "Module1/Images/Pasted image 20260119103831.png",
     "Module1/Images/Pasted image 20260119103759.png",
