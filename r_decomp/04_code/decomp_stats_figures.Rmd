@@ -429,6 +429,14 @@ w_unifrac <- read_tsv("beta_div/weighted_unifrac.txt")
 
 # Clean metrics
 # bray curtis
+# get variance
+bray_curtis_var <- bray_curtis %>%
+  slice(3) %>%   # row 3 contains the numeric proportion explained values
+  separate(`324`, into = paste0("PC", 1:10), sep = "\t") %>%  # split tab-separated values
+  mutate(across(starts_with("PC"), ~ as.numeric(.x) * 100)) %>%  # convert to percent
+  select(PC1, PC2, PC3) 
+
+# clean ordination
 bray_curtis <- bray_curtis %>%
   slice(6:n()) %>%
   filter(!Eigvals %in% c("Biplot", "Site constraints")) %>%
@@ -442,6 +450,14 @@ metadata_bc <- bray_curtis %>%
 
 
 # Jaccard
+# get variance
+jaccard_var <- jaccard %>%
+  slice(3) %>%   # row 3 contains the numeric proportion explained values
+  separate(`324`, into = paste0("PC", 1:10), sep = "\t") %>%  # split tab-separated values
+  mutate(across(starts_with("PC"), ~ as.numeric(.x) * 100)) %>%  # convert to percent
+  select(PC1, PC2, PC3) 
+
+# Clean ordinace
 jaccard <- jaccard %>%
   slice(6:n()) %>%
   filter(!Eigvals %in% c("Biplot", "Site constraints")) %>%
