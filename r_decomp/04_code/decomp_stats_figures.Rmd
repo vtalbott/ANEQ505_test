@@ -437,7 +437,8 @@ bray_curtis <- bray_curtis %>%
 
 metadata_bc <- bray_curtis %>%
   select(sample_name, PC1, PC2, PC3) %>%
-  left_join(metadata)
+  left_join(metadata) %>% 
+  mutate(across(c(PC1, PC2, PC3), as.numeric))
 
 
 # Jaccard
@@ -449,7 +450,8 @@ jaccard <- jaccard %>%
 
 metadata_jaccard <- jaccard %>%
   select(sample_name, PC1, PC2, PC3) %>%
-  left_join(metadata)
+  left_join(metadata) %>% 
+  mutate(across(c(PC1, PC2, PC3), as.numeric))
 
 # Unweighted Unifrac
 uw_unifrac <- uw_unifrac %>%
@@ -460,7 +462,8 @@ uw_unifrac <- uw_unifrac %>%
 
 metadata_uwunifrac <- uw_unifrac %>%
   select(sample_name, PC1, PC2, PC3) %>%
-  left_join(metadata)
+  left_join(metadata) %>% 
+  mutate(across(c(PC1, PC2, PC3), as.numeric))
 
 # Weighted Unifrac
 w_unifrac <- w_unifrac %>%
@@ -471,7 +474,8 @@ w_unifrac <- w_unifrac %>%
 
 metadata_wunifrac <- w_unifrac %>%
   select(sample_name, PC1, PC2, PC3) %>%
-  left_join(metadata)
+  left_join(metadata) %>% 
+  mutate(across(c(PC1, PC2, PC3), as.numeric))
 
 ```
 - Now that we've done some data tidying we can finally get to stats for beta diversity, I am going to keep using the add0c split for demonstration purposes. 
@@ -482,9 +486,201 @@ metadata_wunifrac <- w_unifrac %>%
 ## add0c_split + facility + sample_type (question 3)
 - If you think back to the PCoA plots, we saw three axes: PC1, PC2, and PC3. We will test each of these axes to determine whether the variance along that axis is explained by our variables. In many microbiome datasets, time often explains a large portion of the variance on PC1, although this is not always the case. 
 
-Bray Curtis
+# Bray Curtis
+
 PC1
 ```{r}
+# Build model
+model_add0_facility_sampletype_bc1 <- lmer(PC1 ~ sample_type*add0c_split + facility + (1|host_subject_id), data = metadata_bc)  
+# I always add which PC I am testing into the model name
 
+# Residual diagnostic plot, check assumptions
+plot(model_add0_facility_sampletype_bc1)
+# look at estimated variance components
+summary(model_add0_facility_sampletype_bc1)
+# residual diagnostic plot, check assumptions
+anova(model_add0_facility_sampletype_bc1)
+# pairwise comparisons
+emmeans(model_add0_facility_sampletype_bc1, pairwise ~ sample_type|add0c_split)
 ```
 
+PC2
+```{r}
+# Build model
+model_add0_facility_sampletype_bc2 <- lmer(PC2 ~ sample_type*add0c_split + facility + (1|host_subject_id), data = metadata_bc)  
+# I always add which PC I am testing into the model name
+
+# Residual diagnostic plot, check assumptions
+plot(model_add0_facility_sampletype_bc2)
+# look at estimated variance components
+summary(model_add0_facility_sampletype_bc2)
+# residual diagnostic plot, check assumptions
+anova(model_add0_facility_sampletype_bc2)
+# pairwise comparisons
+emmeans(model_add0_facility_sampletype_bc2, pairwise ~ sample_type|add0c_split)
+```
+
+
+PC3
+```{r}
+# Build model
+model_add0_facility_sampletype_bc3 <- lmer(PC3 ~ sample_type*add0c_split + facility + (1|host_subject_id), data = metadata_bc)  
+# I always add which PC I am testing into the model name
+
+# Residual diagnostic plot, check assumptions
+plot(model_add0_facility_sampletype_bc3)
+# look at estimated variance components
+summary(model_add0_facility_sampletype_bc3)
+# residual diagnostic plot, check assumptions
+anova(model_add0_facility_sampletype_bc3)
+# pairwise comparisons
+emmeans(model_add0_facility_sampletype_bc3, pairwise ~ sample_type|add0c_split)
+```
+
+# Jaccard
+
+PC1
+```{r}
+# Build model
+model_add0_facility_sampletype_j1 <- lmer(PC1 ~ sample_type*add0c_split + facility + (1|host_subject_id), data = metadata_jaccard)  
+# I always add which PC I am testing into the model name
+
+# Residual diagnostic plot, check assumptions
+plot(model_add0_facility_sampletype_j1)
+# look at estimated variance components
+summary(model_add0_facility_sampletype_j1)
+# residual diagnostic plot, check assumptions
+anova(model_add0_facility_sampletype_j1)
+# pairwise comparisons
+emmeans(model_add0_facility_sampletype_j1, pairwise ~ sample_type|add0c_split)
+```
+
+
+PC2
+```{r}
+# Build model
+model_add0_facility_sampletype_j2 <- lmer(PC2 ~ sample_type*add0c_split + facility + (1|host_subject_id), data = metadata_jaccard)  
+# I always add which PC I am testing into the model name
+
+# Residual diagnostic plot, check assumptions
+plot(model_add0_facility_sampletype_j2)
+# look at estimated variance components
+summary(model_add0_facility_sampletype_j2)
+# residual diagnostic plot, check assumptions
+anova(model_add0_facility_sampletype_j2)
+# pairwise comparisons
+emmeans(model_add0_facility_sampletype_j2, pairwise ~ sample_type|add0c_split)
+```
+
+
+PC3
+```{r}
+# Build model
+model_add0_facility_sampletype_j3 <- lmer(PC3 ~ sample_type*add0c_split + facility + (1|host_subject_id), data = metadata_jaccard)  
+# I always add which PC I am testing into the model name
+
+# Residual diagnostic plot, check assumptions
+plot(model_add0_facility_sampletype_j3)
+# look at estimated variance components
+summary(model_add0_facility_sampletype_j3)
+# residual diagnostic plot, check assumptions
+anova(model_add0_facility_sampletype_j3)
+# pairwise comparisons
+emmeans(model_add0_facility_sampletype_j3, pairwise ~ sample_type|add0c_split)
+```
+# Unweighted Unifrac
+
+PC1
+```{r}
+# Build model
+model_add0_facility_sampletype_uwunifrac1 <- lmer(PC1 ~ sample_type*add0c_split + facility + (1|host_subject_id), data = metadata_uwunifrac)  
+# I always add which PC I am testing into the model name
+
+# Residual diagnostic plot, check assumptions
+plot(model_add0_facility_sampletype_uwunifrac1)
+# look at estimated variance components
+summary(model_add0_facility_sampletype_uwunifrac1)
+# residual diagnostic plot, check assumptions
+anova(model_add0_facility_sampletype_uwunifrac1)
+# pairwise comparisons
+emmeans(model_add0_facility_sampletype_uwunifrac1, pairwise ~ sample_type|add0c_split)
+```
+PC2
+```{r}
+# Build model
+model_add0_facility_sampletype_uwunifrac2 <- lmer(PC2 ~ sample_type*add0c_split + facility + (1|host_subject_id), data = metadata_uwunifrac)  
+# I always add which PC I am testing into the model name
+
+# Residual diagnostic plot, check assumptions
+plot(model_add0_facility_sampletype_uwunifrac2)
+# look at estimated variance components
+summary(model_add0_facility_sampletype_uwunifrac2)
+# residual diagnostic plot, check assumptions
+anova(model_add0_facility_sampletype_uwunifrac2)
+# pairwise comparisons
+emmeans(model_add0_facility_sampletype_uwunifrac2, pairwise ~ sample_type|add0c_split)
+```
+PC3
+```{r}
+# Build model
+model_add0_facility_sampletype_uwunifrac3 <- lmer(PC3 ~ sample_type*add0c_split + facility + (1|host_subject_id), data = metadata_uwunifrac)  
+# I always add which PC I am testing into the model name
+
+# Residual diagnostic plot, check assumptions
+plot(model_add0_facility_sampletype_uwunifrac3)
+# look at estimated variance components
+summary(model_add0_facility_sampletype_uwunifrac3)
+# residual diagnostic plot, check assumptions
+anova(model_add0_facility_sampletype_uwunifrac3)
+# pairwise comparisons
+emmeans(model_add0_facility_sampletype_uwunifrac3, pairwise ~ sample_type|add0c_split)
+```
+# Weighted Unifrac
+
+PC1
+```{r}
+# Build model
+model_add0_facility_sampletype_wunifrac1 <- lmer(PC1 ~ sample_type*add0c_split + facility + (1|host_subject_id), data = metadata_wunifrac)  
+# I always add which PC I am testing into the model name
+
+# Residual diagnostic plot, check assumptions
+plot(model_add0_facility_sampletype_wunifrac1)
+# look at estimated variance components
+summary(model_add0_facility_sampletype_wunifrac1)
+# residual diagnostic plot, check assumptions
+anova(model_add0_facility_sampletype_wunifrac1)
+# pairwise comparisons
+emmeans(model_add0_facility_sampletype_wunifrac1, pairwise ~ sample_type|add0c_split)
+```
+PC2
+```{r}
+# Build model
+model_add0_facility_sampletype_wunifrac2 <- lmer(PC2 ~ sample_type*add0c_split + facility + (1|host_subject_id), data = metadata_wunifrac)  
+# I always add which PC I am testing into the model name
+
+# Residual diagnostic plot, check assumptions
+plot(model_add0_facility_sampletype_wunifrac2)
+# look at estimated variance components
+summary(model_add0_facility_sampletype_wunifrac2)
+# residual diagnostic plot, check assumptions
+anova(model_add0_facility_sampletype_wunifrac2)
+# pairwise comparisons
+emmeans(model_add0_facility_sampletype_wunifrac2, pairwise ~ sample_type|add0c_split)
+```
+PC3
+```{r}
+# Build model
+model_add0_facility_sampletype_wunifrac3 <- lmer(PC3 ~ sample_type*add0c_split + facility + (1|host_subject_id), data = metadata_wunifrac)  
+# I always add which PC I am testing into the model name
+
+# Residual diagnostic plot, check assumptions
+plot(model_add0_facility_sampletype_wunifrac3)
+# look at estimated variance components
+summary(model_add0_facility_sampletype_wunifrac3)
+# residual diagnostic plot, check assumptions
+anova(model_add0_facility_sampletype_wunifrac3)
+# pairwise comparisons
+emmeans(model_add0_facility_sampletype_wunifrac3, pairwise ~ sample_type|add0c_split)
+```
+
+# Figure
