@@ -474,4 +474,17 @@ metadata_wunifrac <- w_unifrac %>%
   left_join(metadata)
 
 ```
+- Now that we've done some data tidying we can finally get to stats for beta diversity, I am going to keep using the add0c split for demonstration purposes. 
+
+- There are two common approaches for performing statistical analyses on beta diversity. One approach is first distances, which we discussed last week. If you want to run a linear mixed-effects model (LME) in R using the first-distances output, you can unzip the first-distances.qza artifact and extract the data file. After importing this file into R, you can use it in your model. In this case, instead of using a PCoA axis (e.g., PC1) as the dependent variable, you would use Distance as the dependent variable in the LME.
+
+-  For the sake of time, we will skip ahead to question 3 and build a model examining sample type. In this model, we account for facility as a covariate and evaluate how beta diversity changes over time. Specifically, we include an interaction between accumulated degree days (add_0c) and sample type to test whether the trajectory of beta diversity over time differs between soil and skin samples. 
+## add0c_split + facility + sample_type (question 3)
+- If you think back to the PCoA plots, we saw three axes: PC1, PC2, and PC3. We will test each of these axes to determine whether the variance along that axis is explained by our variables. In many microbiome datasets, time often explains a large portion of the variance on PC1, although this is not always the case. 
+
+Bray Curtis
+PC1
+```{r}
+
+```
 
