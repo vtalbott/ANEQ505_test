@@ -1,0 +1,61 @@
+---
+title: "decomp_stats_figures"
+output: pdf_document
+date: "2026-03-10"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# This script is a general guide for making publication-quality visualizations using QIIME2-generated outputs
+
+################################################################################
+# Installing and loading packages
+################################################################################
+
+# Install packages
+```{r}
+# Each of the packages we will use are CRAN packages
+packages_to_install <- c("tidyverse", "ggplot2","readr","ggpubr","vegan","scales","lme4", "lmerTest","pbkrtest","emmeans")
+
+install.packages(packages_to_install)
+```
+
+# Load packages
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(readr)
+library(ggpubr)
+library(vegan)
+library(scales)
+library(lme4)
+library(lmerTest)
+library(pbkrtest)
+library(emmeans)
+```
+################################################################################
+# Metadata
+################################################################################
+
+# Import and clean metadata if needed
+```{r}
+metadata <- read_tsv("../03_metadata/metadata.txt")
+```
+
+
+################################################################################
+# Alpha diversity
+################################################################################
+
+# Import alpha diversity data from QIIME2 output
+```{r}
+# Alpha diversity metrics
+shannon <- read_tsv("alpha_div/shannon.tsv")
+evenness <- read_tsv("alpha_div/evenness.tsv")
+observed_features <- read_tsv("alpha_div/observed_features.tsv")
+faiths_pd <- read_tsv("alpha_div/faith_pd.tsv")
+```
+
+
