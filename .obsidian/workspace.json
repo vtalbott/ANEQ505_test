@@ -198,6 +198,7 @@
   },
   "active": "b9c6b380112d5bce",
   "lastOpenFiles": [
+    "r_decomp/05_figures/beta_div_sample_type.jpeg",
     "r_decomp/03_metadata/metadata.txt",
     "r_decomp/03_metadata/metadata (1).txt",
     "r_decomp/04_code/decomp_stats_figures.Rmd",
@@ -208,7 +209,6 @@
     "r_decomp/04_code/beta_div",
     "r_decomp/04_code/alpha_div/shannon.tsv",
     "r_decomp/04_code/alpha_div/observed_features.tsv",
-    "r_decomp/04_code/alpha_div/faith_pd.tsv",
     "Homework3/homework_3_pc.md",
     "Homework3/homework_3_mac.md",
     "Homework3/homework_3_answers_and_rubric.md",
