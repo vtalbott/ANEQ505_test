@@ -419,13 +419,59 @@ emmeans(model_add0_facility_sampletype_faithpd, pairwise ~ sample_type|add0c_spl
 ################################################################################
 
 # Load in beta diversity metrics and tidy to add to metadata
+(remember this is already our PCOA results so this is already our ordinations). I make separate metadata's for each beta diversity metric, another option would be to rename each PC ex. PC1J for jaccard and add PC1-PC3 for each metric to the metadata. I find it easier to keep everything seperate when the metrics have different metadata. 
 ```{r}
-# Read in beta div metrics
+# Read in beta div metrics 
 bray_curtis <- read_tsv("beta_div/bray_curtis.txt")
 jaccard <- read_tsv("beta_div/jaccard.txt")
 uw_unifrac <- read_tsv("beta_div/unweighted_unifrac.txt")
 w_unifrac <- read_tsv("beta_div/weighted_unifrac.txt")
 
-# Tidy metrics to add to metadata
+# Clean metrics
+# bray curtis
+bray_curtis <- bray_curtis %>%
+  slice(6:n()) %>%
+  filter(!Eigvals %in% c("Biplot", "Site constraints")) %>%
+  separate(`324`, into = paste0("PC", 1:10), sep = "\t") %>%
+  rename(sample_name = Eigvals) #change eigenvals to match the sampleid, sample_name etc in your metadata
+
+metadata_bc <- bray_curtis %>%
+  select(sample_name, PC1, PC2, PC3) %>%
+  left_join(metadata)
+
+
+# Jaccard
+jaccard <- jaccard %>%
+  slice(6:n()) %>%
+  filter(!Eigvals %in% c("Biplot", "Site constraints")) %>%
+  separate(`324`, into = paste0("PC", 1:10), sep = "\t") %>%
+  rename(sample_name = Eigvals) #change eigenvals to match the sampleid, sample_name etc in your metadata
+
+metadata_jaccard <- jaccard %>%
+  select(sample_name, PC1, PC2, PC3) %>%
+  left_join(metadata)
+
+# Unweighted Unifrac
+uw_unifrac <- uw_unifrac %>%
+  slice(6:n()) %>%
+  filter(!Eigvals %in% c("Biplot", "Site constraints")) %>%
+  separate(`324`, into = paste0("PC", 1:10), sep = "\t") %>%
+  rename(sample_name = Eigvals) #change eigenvals to match the sampleid, sample_name etc in your metadata
+
+metadata_uwunifrac <- uw_unifrac %>%
+  select(sample_name, PC1, PC2, PC3) %>%
+  left_join(metadata)
+
+# Weighted Unifrac
+w_unifrac <- w_unifrac %>%
+  slice(6:n()) %>%
+  filter(!Eigvals %in% c("Biplot", "Site constraints")) %>%
+  separate(`324`, into = paste0("PC", 1:10), sep = "\t") %>%
+  rename(sample_name = Eigvals) #change eigenvals to match the sampleid, sample_name etc in your metadata
+
+metadata_wunifrac <- w_unifrac %>%
+  select(sample_name, PC1, PC2, PC3) %>%
+  left_join(metadata)
+
 ```
 
