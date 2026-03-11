@@ -25,10 +25,14 @@
             "id": "79f4bb6865f4e000",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Homework3/homework_3_answers_and_rubric.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "homework_3_answers_and_rubric"
             }
           }
         ],
@@ -196,8 +200,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "b9c6b380112d5bce",
+  "active": "79f4bb6865f4e000",
   "lastOpenFiles": [
+    "Example.md",
     "r_decomp/beta_div/weighted_unifrac.txt",
     "r_decomp/beta_div/unweighted_unifrac.txt",
     "r_decomp/beta_div/jaccard.txt",
@@ -208,7 +213,6 @@
     "r_decomp/alpha_div/faith_pd.tsv",
     "r_decomp/alpha_div/evenness.tsv",
     "r_decomp/alpha_div",
-    "r_decomp/weighted_unifrac.txt",
     "r_decomp/05_figures/add_split_shannon.jpeg",
     "r_decomp/05_figures/alpha_div_addOc.jpeg",
     "r_decomp/05_figures/beta_div_sample_type.jpeg",
@@ -216,7 +220,6 @@
     "Homework3/homework_3_mac.md",
     "Homework3/homework_3_answers_and_rubric.md",
     "Notes.md",
-    "Example.md",
     "Checking tree for ASVs.md",
     "Homework/homework_1_PC (1).md",
     "Homework2/homework_2_PC_VS.md",
