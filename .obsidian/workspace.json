@@ -202,6 +202,9 @@
   },
   "active": "79f4bb6865f4e000",
   "lastOpenFiles": [
+    "r_decomp/05_figures/add_split_obsFeats_sampleType.jpeg",
+    "r_decomp/05_figures/add_split_faiths_facility.jpeg",
+    "r_decomp/04_code/decomp_stats_figures_v2.Rmd",
     "Example.md",
     "r_decomp/beta_div/weighted_unifrac.txt",
     "r_decomp/beta_div/unweighted_unifrac.txt",
@@ -212,7 +215,6 @@
     "r_decomp/alpha_div/observed_features.tsv",
     "r_decomp/alpha_div/faith_pd.tsv",
     "r_decomp/alpha_div/evenness.tsv",
-    "r_decomp/alpha_div",
     "r_decomp/05_figures/add_split_shannon.jpeg",
     "r_decomp/05_figures/alpha_div_addOc.jpeg",
     "r_decomp/05_figures/beta_div_sample_type.jpeg",
@@ -245,7 +247,6 @@
     "Module1/Images/Pasted image 20260119102959.png",
     "Module1/Images/Pasted image 20260119103831.png",
     "Module1/Images/Pasted image 20260119103759.png",
-    "Module1/Images/Pasted image 20260119103702.png",
-    "Module1/Images/Pasted image 20260119103638.png"
+    "Module1/Images/Pasted image 20260119103702.png"
   ]
 }
