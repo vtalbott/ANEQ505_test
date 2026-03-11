@@ -12,8 +12,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ################################################################################
 # Research Questions
-1. Does microbial community composition change over accumulated degree days?
-2. Does facility influence microbial diversity or community composition?
+1. Does microbial community diversity change over accumulated degree days?
+2. Does facility influence microbial diversity?
 3. Do soil and skin samples differ in their microbial diversity and community composition?
 
 - Your research question doesn’t need to be included in your R Markdown, but you should have a data analysis plan. It’s easy to go down rabbit holes if you don’t stick to analyses that directly address your questions.
