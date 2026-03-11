@@ -355,9 +355,38 @@ ggsave(alpha_div_addOc, filename = "../05_figures/alpha_div_addOc.jpeg", device 
 
 
 # add_0c 3 group figure
-```{r}
 
+```{r}
+model_add0split_shannon <- lmer(shannon_entropy ~ add0c_split + (1|host_subject_id), data = metadata)
+
+pvals <- pairs(emmeans(model_add0split_shannon, ~ add0c_split)) |> as.data.frame()
+
+# make table for stat_pvalue_manual with rounded p-values
+pvals_table <- data.frame(
+  group1 = c("0-150","0-150","150-300"),
+  group2 = c("150-300","300-450","300-450"),
+  p = round(pvals$p.value, 3),           # round to 3 decimals
+  y.position = max(metadata$shannon_entropy) + c(0.1,0.3,0.5)
+)
+
+# plot
+add_split_shannon <- ggplot(metadata, aes(x = add0c_split, y = shannon_entropy)) +
+  geom_boxplot() +
+  stat_pvalue_manual(pvals_table, label = "p") +
+  theme_bw() +
+  theme(
+    axis.title = element_text(face = "bold"),
+    plot.title = element_text(face = "bold"))+
+  labs(x = "Accumulated Degree Day 3 Groups",
+       y = "Shannon Entropy",
+       title = "Shannon Diversity for ADD Split into 3 Groups")
+
+add_split_shannon
+
+# Save the figure
+ggsave(add_split_shannon, filename = "../05_figures/add_split_shannon.jpeg", device = "jpeg", dpi = 300, width = 8, height = 9)
 ```
+
 
 
 ## add0c + facility (question 2)
@@ -438,12 +467,19 @@ emmeans(model_add0_facility_faithpd, pairwise ~ facility|add0c_split)
 ```
 - We can see that facility is significant at earlier timepoints so when we look at sample_type we will include it in our model. 
 
-# Facilty figure ajusted for time (box plot) (3 timepoint plot)
+# Facilty figure ajusted for time (box plot) (3 timepoint box plot)
+```{r}
+
+```
 
 
 
 
 # Facility figure over time (voltility plot)
+```{r}
+
+```
+
 
 
 ## add_0c + facility + sample_type (question 3)
