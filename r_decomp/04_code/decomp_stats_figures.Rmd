@@ -252,6 +252,109 @@ emmeans(model_add0split2_shannon, pairwise ~ add0c_split2)
 ```
 
 # add_0c figure (voltility plot)
+
+```{r}
+# Shannon
+add0c_shannon <- ggplot(metadata, aes(x = add_0c, y = shannon_entropy, linetype = sample_type)) +
+  geom_line(size = 0.7, alpha = 0.8) +
+  theme_bw(base_size = 14) +
+  labs(
+    x = "Accumulated Degree Days (ADD)",
+    y = "Shannon Entropy",
+    linetype = "Sample Type",
+    title = "Shannon"
+  ) +
+  theme(
+    axis.title = element_text(face = "bold"),
+    axis.text = element_text(color = "black"),
+    legend.title = element_text(face = "bold"),
+    legend.position = "bottom",
+    legend.background = element_rect(fill = "transparent"),
+    plot.title = element_text(face = "bold")
+  )
+
+add0c_shannon
+
+# Evennes
+add0c_evenness <- ggplot(metadata, aes(x = add_0c, y = pielou_evenness, linetype = sample_type)) +
+  geom_line(size = 0.7, alpha = 0.8) +
+  theme_bw(base_size = 14) +
+  labs(
+    x = "Accumulated Degree Days (ADD)",
+    y = "Pielou's Evenness",
+    linetype = "Sample Type",
+    title = "Evenness"
+  ) +
+  theme(
+    axis.title = element_text(face = "bold"),
+    axis.text = element_text(color = "black"),
+    legend.title = element_text(face = "bold"),
+    legend.position = "bottom",
+    legend.background = element_rect(fill = "transparent"),
+    plot.title = element_text(face = "bold")
+  )
+
+add0c_evenness
+
+# Observed Features
+add0c_obfeatures <- ggplot(metadata, aes(x = add_0c, y = observed_features, linetype = sample_type)) +
+  geom_line(size = 0.7, alpha = 0.8) +
+  theme_bw(base_size = 14) +
+  labs(
+    x = "Accumulated Degree Days (ADD)",
+    y = "Observed Features",
+    linetype = "Sample Type",
+    title = "Observed Features"
+  ) +
+  theme(
+    axis.title = element_text(face = "bold"),
+    axis.text = element_text(color = "black"),
+    legend.title = element_text(face = "bold"),
+    legend.position = "bottom",
+    legend.background = element_rect(fill = "transparent"),
+    plot.title = element_text(face = "bold")
+  )
+
+add0c_obfeatures
+
+# Faith's PD
+add0c_faithpd <- ggplot(metadata, aes(x = add_0c, y = faith_pd, linetype = sample_type)) +
+  geom_line(size = 0.7, alpha = 0.8) +
+  theme_bw(base_size = 14) +
+  labs(
+    x = "Accumulated Degree Days (ADD)",
+    y = "Faith's PD",
+    linetype = "Sample Type",
+    title = "Faith's PD"
+  ) +
+  theme(
+    axis.title = element_text(face = "bold"),
+    axis.text = element_text(color = "black"),
+    legend.title = element_text(face = "bold"),
+    legend.position = "bottom",
+    legend.background = element_rect(fill = "transparent"),
+    plot.title = element_text(face = "bold")
+  )
+
+add0c_faithpd
+
+# Combine the plots
+alpha_div_addOc <- ggarrange(add0c_shannon, add0c_evenness,
+                                  add0c_obfeatures, add0c_faithpd,
+                                  ncol = 2, nrow = 2,
+                                  labels = c("A","B","C","D"),
+                                  common.legend = TRUE,
+                                  legend = "bottom")
+alpha_div_addOc
+
+# Save the figure
+ggsave(alpha_div_addOc, filename = "../05_figures/alpha_div_addOc.jpeg", device = "jpeg", dpi = 300, width = 12, height = 9)
+
+```
+
+
+
+# add_0c 3 group figure
 ```{r}
 
 ```
