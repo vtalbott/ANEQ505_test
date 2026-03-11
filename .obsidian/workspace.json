@@ -198,6 +198,8 @@
   },
   "active": "b9c6b380112d5bce",
   "lastOpenFiles": [
+    "r_decomp/alpha_div (1).zip",
+    "r_decomp/beta_div (1).zip",
     "r_decomp.zip",
     "r_decomp/05_figures/add_split_shannon.jpeg",
     "r_decomp/05_figures/alpha_div_addOc.jpeg",
@@ -210,8 +212,6 @@
     "r_decomp/04_code/beta_div/jaccard.txt",
     "r_decomp/04_code/beta_div/bray_curtis.txt",
     "r_decomp/04_code/beta_div",
-    "r_decomp/04_code/alpha_div/shannon.tsv",
-    "r_decomp/04_code/alpha_div/observed_features.tsv",
     "Homework3/homework_3_pc.md",
     "Homework3/homework_3_mac.md",
     "Homework3/homework_3_answers_and_rubric.md",
