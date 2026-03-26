@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homework2/homework_2_answers_rubric.md",
+                "file": "Homework3/homework_3_answers_and_rubric.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "homework_2_answers_rubric"
+              "title": "homework_3_answers_and_rubric"
             }
           }
         ],
@@ -202,6 +202,7 @@
   },
   "active": "79f4bb6865f4e000",
   "lastOpenFiles": [
+    "Homework2/homework_2_answers_rubric.md",
     "Homework3/homework_3_answers_and_rubric.md",
     "r_decomp/05_figures/add_split_obsFeats_sampleType.jpeg",
     "r_decomp/05_figures/add_split_faiths_facility.jpeg",
@@ -226,7 +227,6 @@
     "Homework/homework_1_PC (1).md",
     "Homework2/homework_2_PC_VS.md",
     "Homework2/homework_2_mac_VS.md",
-    "Homework2/homework_2_answers_rubric.md",
     "Homework2/homework_2_answers_qiime2026.1.md",
     "Homework/homework_2_mac.md",
     "Homework/homework_2_PC.md",
