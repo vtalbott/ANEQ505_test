@@ -34,9 +34,21 @@
               "icon": "lucide-file",
               "title": "Decomp_tutorial"
             }
+          },
+          {
+            "id": "34a698296a699d5f",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.12.7"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -200,7 +212,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "79f4bb6865f4e000",
+  "active": "34a698296a699d5f",
   "lastOpenFiles": [
     "r_decomp_tutorial/05_figures/add_split_faiths_facility.jpeg",
     "r_decomp_tutorial/05_figures/add_split_shannon.jpeg",
