@@ -5,7 +5,8 @@ Correct file path for loading in tabulate_results.tsv (taxabarplot) ~={red}(1 po
 Alpha diversity plot, Beta diversity plot, Taxabar plot  ~={red}(1 point)=~
 Filter table for ANCOM-BC2 (~={red}1 point=~)
 Filtering out low abundance/low prevalence ASVs (~={red}1 point=~)
-Running ANCOM-BC2 (~={red}3 points, 1 point per correct chunk=~)
+Collapse to species level (~={red}1 point=~)
+Running ANCOM-BC2 (~={red}2 points, 1 point per correct chunk=~)
 Questions ~={red} (5 points)=~ 
 
 ~={red}15 points total=~
@@ -43,13 +44,37 @@ qiime feature-table filter-samples \
 qiime feature-table filter-features \  
   --i-table table_2k.qza \  
   --p-min-frequency 50 \  
-  --p-min-samples 4 \  
+  --p-min-samples 4 \  # 10 to 20% of samples so fix this
   --o-filtered-table table_2k_abund.qza
 ```
 
+```
+# Collapse features to species level
+qiime taxa collapse \
+  --i-table table_nomitochloro_1500_abund.qza \
+  --i-taxonomy taxonomy_gg2.qza \
+  --p-level 7 \
+  --o-collapsed-table table_nomitochloro_1500_abund_L7.qza
+```
 
+```
+# Run ANCOM-BC2
+qiime composition ancombc2 \
+  --i-table asv-table-ms2-dominant-sample-types.qza \
+  --m-metadata-file sample-metadata.tsv \
+  --p-fixed-effects-formula SampleType \
+  --p-reference-levels 'SampleType::Human Excrement Compost' \
+  --o-ancombc2-output ancombc2-results.qza
+```
 
-
+```
+# Visualize ANCOM-BC2 results
+bash
+qiime composition ancombc2-visualizer \
+  --i-data ancombc2-results.qza \
+  --i-taxonomy taxonomy.qza \
+  --o-visualization ancombc2-barplot.qzv
+```
 
 ## Homework questions: (~={red}5 POINTS=~)
 1. Describe one way to get data from your qiime2 outputs into a format that can be used for R. 
