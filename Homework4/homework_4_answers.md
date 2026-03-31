@@ -22,8 +22,30 @@ Due:
 3. Understand how to run ANCOM-BC2 and how to interpret the results. 
 --------------------------------------------------
 
+#### Cow Body Site - making figures in R
 
 
+
+
+
+#### Cow Body Site - ANCOM-BC2
+- still will do the filtering line ancomb-bc 
+```
+# Filter samples
+qiime feature-table filter-samples \
+  --i-table dada2_table.qza \
+  --p-min-frequency 2000 \
+  --o-filtered-table table_2k.qza
+```
+
+```
+# Filter out low abundance/low prevalence ASVs
+qiime feature-table filter-features \  
+  --i-table table_2k.qza \  
+  --p-min-frequency 50 \  
+  --p-min-samples 4 \  
+  --o-filtered-table table_2k_abund.qza
+```
 
 
 

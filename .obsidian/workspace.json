@@ -97,12 +97,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homework2/homework_2_answers_rubric.md",
+                "file": "Homework4/homework_4_answers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "homework_2_answers_rubric"
+              "title": "homework_4_answers"
             }
           }
         ],
@@ -270,11 +270,12 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "430d7a95e9ce1f29",
+  "active": "b9c6b380112d5bce",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
-    "Homework4/homework_4_answers.md",
     "Homework3/homework_3_answers_and_rubric.md",
+    "Homework4/homework_4_answers.md",
+    "Homework2/homework_2_answers_rubric.md",
+    "conflict-files-obsidian-git.md",
     "Homework3/homework_3_mac.md",
     "r_decomp_tutorial/05_figures/alpha_div_addOc.jpeg",
     "r_decomp_tutorial/05_figures/add_split_shannon.jpeg",
@@ -298,7 +299,6 @@
     "r_decomp_test/05_figures/add_split_shannon.jpeg",
     "Homework2/homework_2_mac_VS.md",
     "Homework3/homework_3_pc.md",
-    "Homework2/homework_2_answers_rubric.md",
     "Homework2/homework_2_PC_VS.md",
     "Homework2/homework_2_answers_qiime2026.1.md",
     "tree.md",
