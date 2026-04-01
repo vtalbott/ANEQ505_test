@@ -31,9 +31,10 @@ Due:
 
 #### Cow Body Site - ANCOM-BC2
 
-**Filter Samples** 
+**Filter Samples ~={red}(1 point)=~** 
 - Navigate into the decomp tutorial and make a new ancombc2 directory for the ANCOM-BC2 analysis
-- navigate into the ancombc2 directory
+- Navigate into the ancombc2 directory
+- Choose the min frequency for sample filtering:
 ```
 qiime feature-table filter-samples \
   --i-table ../dada2/cow_table_dada2_filtered300.qza \
@@ -41,7 +42,7 @@ qiime feature-table filter-samples \
   --o-filtered-table table_5k.qza
 ```
 
-**Filter out low abundance and low prevalence ASVs**
+**Filter out low abundance and low prevalence ASVs ~={red}(1 point)=~**
 ```
 qiime feature-table filter-features \
   --i-table table_5k.qza \
@@ -50,7 +51,7 @@ qiime feature-table filter-features \
   --o-filtered-table table_5k_abund.qza
 ```
 
-**Collapse features to species level**
+**Collapse features to species level ~={red}(1 point)=~**
 ```
 qiime taxa collapse \
   --i-table table_5k_abund.qza \
@@ -59,23 +60,24 @@ qiime taxa collapse \
   --o-collapsed-table table_nomitochloro_5k_abund_L7.qza
 ```
 
-**Run ANCOM-BC2**
+**Run ANCOM-BC2 ~={red}(1 point)=~**
 ```
 qiime composition ancombc2 \
   --i-table table_nomitochloro_5k_abund_L7.qza \
   --m-metadata-file ../metadata/cow_metadata.txt \
-  --p-fixed-effects-formula SampleType \
-  --p-reference-levels 'SampleType::Human Excrement Compost' \
-  --o-ancombc2-output ancombc2-results.qza
+  --p-fixed-effects-formula body_site \
+  --o-ancombc2-output ancombc2-results-bodysite.qza
 ```
 
+**Visualize the ANCOM-BC2 results ~={red}(1 point)=~**
+- Generate a barplot to visualized the differentially abundant features. 
 ```
 # Visualize ANCOM-BC2 results
 bash
 qiime composition ancombc2-visualizer \
-  --i-data ancombc2-results.qza \
-  --i-taxonomy taxonomy.qza \
-  --o-visualization ancombc2-barplot.qzv
+  --i-data ancombc2-results-bodysite.qza \
+  --i-taxonomy ../taxanomy/taxonomy_gg2.qza \
+  --o-visualization ancombc2-barplot-bodysite.qzv
 ```
 
 ## Homework questions: (~={red}5 POINTS=~)
