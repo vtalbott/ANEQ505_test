@@ -77,7 +77,7 @@ qiime composition ancombc \
 --i-table table_5k_abund_L7.qza \
 --m-metadata-file ../metadata/cow_metadata.txt \
 --p-formula 'body_site' \
---p-reference-levels 'BodySite::fecal'
+--p-reference-levels 'body_site::fecal' \
 --o-differentials ancombc_bodysite.qza  
 
 
@@ -96,8 +96,8 @@ qiime composition da-barplot \
 ```
 
 - All the ancombc ran so will probably just stick with ancombc since we don't want to have to switch qiime versions
-
-
+- I might filter out controls on wednesday if i feel up to adding that
+- did see some chlorplast so need to look into that
 on thrusday I can test the new qiime2 version but probably won't have them do it in the HW
 
 
