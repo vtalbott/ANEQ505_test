@@ -95,7 +95,7 @@ module load module load qiime2/2024.10_amplicon
 - Choose the min frequency for sample filtering:
 ```
 qiime feature-table filter-samples \
---i-table ../dada2/cow_table_dada2_filtered300.qza \
+--i-table ../dada2/table_nomitochloro_gg2_filtered300.qza \
 --p-min-frequency 5000 \
 --o-filtered-table table_5k.qza
 ```
