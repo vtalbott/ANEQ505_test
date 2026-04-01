@@ -26,7 +26,30 @@ Due:
 
 #### Cow Body Site - making figures in R
 
+**Read in metadata**
+- Fill in the file path you used in the R Markdown to load in the metadata. 
+```
+metadata <- read_tsv("../03_metadata/cow_metadata.txt")
+```
 
+**Read in alpha diversity data**
+- Fill in the file path you used in the R Markdown to load in the shannon data
+```
+shannon <- read_tsv("alpha_div/shannon.tsv")
+```
+
+
+**Read in beta diversity data**
+- Fill in the file path you used in the R Markdown to load in the unweighted unifrac data
+```
+uw_unifrac <- read_tsv("beta_div/unweighted_unifrac.txt")
+```
+
+**Load in tabulated results
+- Fill in the file path you used in the R Markdown to load in the tabulated_results.tsv
+```
+tabulated_results <- read_tsv("taxonomy/tabulated_results.tsv")
+```
 
 
 
@@ -69,41 +92,7 @@ qiime taxa collapse \
 --p-level 7 \
 --o-collapsed-table table_5k_abund_L7.qza
 ```
--made it up to this point - ancombc2 is not avaliable for qiime2 2024.10
-
-**Run ANCOM-BC ~={red}(1 point)=~**
-```
-qiime composition ancombc \
---i-table table_5k_abund_L7.qza \
---m-metadata-file ../metadata/cow_metadata.txt \
---p-formula 'body_site' \
---p-reference-levels 'body_site::fecal' \
---o-differentials ancombc_bodysite.qza  
-
-
-```
-
-**Visualize ANCOM-BC results ~={red}(1 point)=~**
-```
-qiime composition tabulate \
---i-data ancombc_bodysite.qza \
---o-visualization ancombc_bodysite.qzv  
-  
-qiime composition da-barplot \
---i-data ancombc_bodysite.qza \
---p-significance-threshold 0.05 \
---o-visualization da_barplot_bodysite.qzv
-```
-
-- All the ancombc ran so will probably just stick with ancombc since we don't want to have to switch qiime versions
-- I might filter out controls on wednesday if i feel up to adding that
-- did see some chlorplast so need to look into that
-on thrusday I can test the new qiime2 version but probably won't have them do it in the HW
-
-
-
-
-
+-made it up to this point - ancombc2 is not available for qiime2 2024.10
 
 
 **Run ANCOM-BC2 ~={red}(1 point)=~**
@@ -117,7 +106,7 @@ qiime composition ancombc2 \
 
 
 **Visualize the ANCOM-BC2 results ~={red}(1 point)=~**
-- Generate a barplot to visualized the differentially abundant features. 
+- Generate a barplot to visualize the differentially abundant features. 
 ```
 # Visualize ANCOM-BC2 results
 bash
@@ -130,7 +119,7 @@ qiime composition ancombc2-visualizer \
 ## Homework questions: (~={red}5 POINTS=~)
 1. Describe one way to get data from your qiime2 outputs into a format that can be used for R. 
    ~={red}Unzip qza's and get the text file with the data, pull csv's from qiime2 view, or use the export command from qiime2=~
-2. Taxabarplot question
+2. Which body site appeared most distinct in the taxa bar plot, meaning it was not similar to at least one of the other body sites? Explain why that site looks different. ~={red}Fecal. Nasal and oral should be similar and skin and udder should be similar =~
 3. When generating the filtered table for ANCOM-BC2, what value did you choose for `--p-min-frequency`? Which core metrics parameter should this match, and why do these values need to be the same? (Report your core metrics value here: ___) ~={red}this should match their core metrics sampling depth, and they are the same becuase we need to filter out any samples with fewer features than we rarefied at=~
 4. Why do we filter out samples with low frequency and filter out low abundance ASVs? ~={red}Filtering can provide better resolution and limit false discovery rate which increases statistical power=~ 
 5. Are there any differentially abundant features between body site (e.g., skin and fecal)?
