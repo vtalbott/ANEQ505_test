@@ -26,27 +26,50 @@ Due:
 
 #### Cow Body Site - making figures in R
 
+**Set up the cow R analysis file structure**
+- Make a cow_r directory, and inside the cow_r directory, make the following directories 
+cow_r  
+├── 01_notes  
+├── 02_data  
+├── 03_metadata  
+├── 04_code  
+└── 05_figures
+
+- Inside the 04_code directory, make the following directories
+04_code  
+├── alpha_div 
+├── beta_div 
+├── taxonomy
+
+- Download the cow_metadata.txt, shannon.tsv, unweighted_unifrac.txt, tabulated_results.tsv, and cow_HW4_r.Rmd files from Canvas and put them in the correct directories. 
+
+**What directory should the cow_HW4_r.Rmd file go in? ~={red}(1 point)=~**
+~={red}The 04_code directory=~
+
+#### Statistical analysis and figure generation in R 
+
+- Now that we have set up the correct file structure and put our files in the correct directories, we can start our cow R analysis. 
+
 **Read in metadata**
-- Fill in the file path you used in the R Markdown to load in the metadata. 
+- Fill in the file path you used in the R Markdown to load the metadata. 
 ```
 metadata <- read_tsv("../03_metadata/cow_metadata.txt")
 ```
 
 **Read in alpha diversity data**
-- Fill in the file path you used in the R Markdown to load in the shannon data
+- Fill in the file path you used in the R Markdown to load the shannon data
 ```
 shannon <- read_tsv("alpha_div/shannon.tsv")
 ```
 
-
 **Read in beta diversity data**
-- Fill in the file path you used in the R Markdown to load in the unweighted unifrac data
+- Fill in the file path you used in the R Markdown to load the unweighted unifrac data
 ```
 uw_unifrac <- read_tsv("beta_div/unweighted_unifrac.txt")
 ```
 
 **Load in tabulated results
-- Fill in the file path you used in the R Markdown to load in the tabulated_results.tsv
+- Fill in the file path you used in the R Markdown to load the tabulated_results.tsv
 ```
 tabulated_results <- read_tsv("taxonomy/tabulated_results.tsv")
 ```
@@ -54,7 +77,7 @@ tabulated_results <- read_tsv("taxonomy/tabulated_results.tsv")
 
 
 #### Cow Body Site - ANCOM-BC2
-**Start and interactive session and activate Qiime2**
+**Start an interactive session and activate Qiime2**
 ```
 ainteractive --ntasks=4 --time=04:00:00
 ```
