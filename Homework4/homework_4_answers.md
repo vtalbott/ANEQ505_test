@@ -30,38 +30,40 @@ Due:
 
 
 #### Cow Body Site - ANCOM-BC2
-- still will do the filtering line ancomb-bc 
+
+**Filter Samples** 
+- Navigate into the decomp tutorial and make a new ancombc2 directory for the ANCOM-BC2 analysis
+- navigate into the ancombc2 directory
 ```
-# Filter samples
 qiime feature-table filter-samples \
-  --i-table dada2_table.qza \
-  --p-min-frequency 2000 \
-  --o-filtered-table table_2k.qza
+  --i-table ../dada2/cow_table_dada2_filtered300.qza \
+  --p-min-frequency 5000 \
+  --o-filtered-table table_5k.qza
 ```
 
+**Filter out low abundance and low prevalence ASVs**
 ```
-# Filter out low abundance/low prevalence ASVs
-qiime feature-table filter-features \  
-  --i-table table_2k.qza \  
-  --p-min-frequency 50 \  
-  --p-min-samples 4 \  # 10 to 20% of samples so fix this
-  --o-filtered-table table_2k_abund.qza
+qiime feature-table filter-features \
+  --i-table table_5k.qza \
+  --p-min-frequency 50 \
+  --p-min-samples 20 \
+  --o-filtered-table table_5k_abund.qza
 ```
 
+**Collapse features to species level**
 ```
-# Collapse features to species level
 qiime taxa collapse \
-  --i-table table_nomitochloro_1500_abund.qza \
-  --i-taxonomy taxonomy_gg2.qza \
+  --i-table table_5k_abund.qza \
+  --i-taxonomy ../taxonomy/taxonomy_gg2.qza \
   --p-level 7 \
-  --o-collapsed-table table_nomitochloro_1500_abund_L7.qza
+  --o-collapsed-table table_nomitochloro_5k_abund_L7.qza
 ```
 
+**Run ANCOM-BC2**
 ```
-# Run ANCOM-BC2
 qiime composition ancombc2 \
-  --i-table asv-table-ms2-dominant-sample-types.qza \
-  --m-metadata-file sample-metadata.tsv \
+  --i-table table_nomitochloro_5k_abund_L7.qza \
+  --m-metadata-file ../metadata/cow_metadata.txt \
   --p-fixed-effects-formula SampleType \
   --p-reference-levels 'SampleType::Human Excrement Compost' \
   --o-ancombc2-output ancombc2-results.qza
