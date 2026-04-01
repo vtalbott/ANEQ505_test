@@ -1,8 +1,8 @@
 Set up correct directory structure~={red}(1point)=~
+Correct file path for loading in metadata~={red}(1 point)=~
 Correct file path for loading in alpha diversity data ~={red}(1 point)=~
 Correct file path for loading in beta diversity data ~={red}(1 point)=~
 Correct file path for loading in tabulate_results.tsv (taxabarplot) ~={red}(1 point)=~
-Alpha diversity plot, Beta diversity plot, Taxabar plot  ~={red}(1 point)=~
 Filter table for ANCOM-BC2~={red} (~={red}1 point=~)=~
 Filtering out low abundance/low prevalence ASVs ~={red}(~={red}1 point=~)=~
 Collapse to species level ~={red}(~={red}1 point=~)=~
@@ -15,12 +15,12 @@ Questions ~={red} (5 points)=~
 
 Due: 
 
-**For complete credit for this assignment, you must answer all questions and include all commands in your obsidian upload.** 
+**For complete credit for this assignment, you must answer all questions and include all commands in your Obsidian upload.** 
 
 ------------------------------------------------------------------
 **Learning Objectives**
 1. Practice recording commands and editing code to match your analysis.
-2. Create publication ready figures for alpha and beta diversity.
+2. Create publication-ready figures for alpha and beta diversity.
 3. Understand how to run ANCOM-BC2 and how to interpret the results. 
 --------------------------------------------------
 
@@ -49,6 +49,9 @@ cow_r
 #### Statistical analysis and figure generation in R 
 
 - Now that we have set up the correct file structure and put our files in the correct directories, we can start our cow R analysis. 
+- Open the cow_HW4_r.Rmd file and start working through the analysis 
+
+**Note that if you open the markdown file in your Downloads, the working directory will not be correct. Make sure to only open the markdown file after you have put it in the correct working directory.**
 
 **Read in metadata**
 - Fill in the file path you used in the R Markdown to load the metadata. 
@@ -74,14 +77,13 @@ uw_unifrac <- read_tsv("beta_div/unweighted_unifrac.txt")
 tabulated_results <- read_tsv("taxonomy/tabulated_results.tsv")
 ```
 
-
-
-#### Cow Body Site - ANCOM-BC2
+#### Cow Body Site - ANCOM-BC2 in Qiime2
 **Start an interactive session and activate Qiime2**
 ```
 ainteractive --ntasks=4 --time=04:00:00
 ```
 
+- **ANCOMBC2 is only available in the 2026 versions of qiime2, so we need to activate the latest version. Make sure to activate qiime2026.2**
 ```
 module purge
 module load module load qiime2/2024.10_amplicon
