@@ -37,47 +37,79 @@ Due:
 - Choose the min frequency for sample filtering:
 ```
 qiime feature-table filter-samples \
-  --i-table ../dada2/cow_table_dada2_filtered300.qza \
-  --p-min-frequency 5000 \
-  --o-filtered-table table_5k.qza
+--i-table ../dada2/cow_table_dada2_filtered300.qza \
+--p-min-frequency 5000 \
+--o-filtered-table table_5k.qza
 ```
 
 **Filter out low abundance and low prevalence ASVs ~={red}(1 point)=~**
 ```
 qiime feature-table filter-features \
-  --i-table table_5k.qza \
-  --p-min-frequency 50 \
-  --p-min-samples 20 \
-  --o-filtered-table table_5k_abund.qza
+--i-table table_5k.qza \
+--p-min-frequency 50 \
+--p-min-samples 20 \
+--o-filtered-table table_5k_abund.qza
 ```
 
 **Collapse features to species level ~={red}(1 point)=~**
 ```
 qiime taxa collapse \
-  --i-table table_5k_abund.qza \
-  --i-taxonomy ../taxonomy/taxonomy_gg2.qza \
-  --p-level 7 \
-  --o-collapsed-table table_nomitochloro_5k_abund_L7.qza
+--i-table table_5k_abund.qza \
+--i-taxonomy ../taxonomy/taxonomy_gg2.qza \
+--p-level 7 \
+--o-collapsed-table table_5k_abund_L7.qza
 ```
+-made it up to this point - ancombc2 is not avaliable for qiime2 2024.10
+
+**Run ANCOM-BC**
+
+```
+qiime composition ancombc \
+  --i-table table_5k_abund_L7.qza \
+  --m-metadata-file ../metadata/cow_metadata.txt \
+  --p-formula 'body_site' \
+  --o-differentials ancombc_bodysite.qza  
+  
+qiime composition tabulate \  
+  --i-data ancombc_bodysite.qza \  
+  --o-visualization ancombc_bodysite.qzv  
+  
+qiime composition da-barplot \
+  --i-data ancombc_bodysite.qza \
+  --p-significance-threshold 0.05 \
+  --o-visualization da_barplot_bodysite.qzv
+```
+
+
+
+
+
+
+
+
+
+
+
 
 **Run ANCOM-BC2 ~={red}(1 point)=~**
 ```
 qiime composition ancombc2 \
-  --i-table table_nomitochloro_5k_abund_L7.qza \
-  --m-metadata-file ../metadata/cow_metadata.txt \
-  --p-fixed-effects-formula body_site \
-  --o-ancombc2-output ancombc2-results-bodysite.qza
+--i-table table_5k_abund_L7.qza \
+--m-metadata-file ../metadata/cow_metadata.txt \
+--p-fixed-effects-formula body_site \
+--o-ancombc2-output ancombc2-results-bodysite.qza
 ```
-
+-made it up to this point - ancombc2 is not avaliable for qiime2 2024.10
+Visualize the ANCOM-BC results
 **Visualize the ANCOM-BC2 results ~={red}(1 point)=~**
 - Generate a barplot to visualized the differentially abundant features. 
 ```
 # Visualize ANCOM-BC2 results
 bash
 qiime composition ancombc2-visualizer \
-  --i-data ancombc2-results-bodysite.qza \
-  --i-taxonomy ../taxanomy/taxonomy_gg2.qza \
-  --o-visualization ancombc2-barplot-bodysite.qzv
+--i-data ancombc2-results-bodysite.qza \
+--i-taxonomy ../taxanomy/taxonomy_gg2.qza \
+--o-visualization ancombc2-barplot-bodysite.qzv
 ```
 
 ## Homework questions: (~={red}5 POINTS=~)
