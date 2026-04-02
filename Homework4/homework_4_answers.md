@@ -88,6 +88,8 @@ ainteractive --ntasks=4 --time=04:00:00
 module purge
 module load qiime2/2026.1_amplicon
 ```
+(When running commands using qiime2/2026.1_amplicon you might get this warning: */curc/sw/install/bio/qiime2/2026.1/2026.1_amplicon_env/lib/python3.10/site-packages/unifrac/__init__.py:9: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81. import pkg_resources*. This is just saying that one of the qiime2 packages needs to be updated it won't affect the qiime2 outputs.)
+
 
 **Filter Samples ~={red}(1 point)=~** 
 - Navigate into the decomp tutorial and make a new ancombc2 directory for the ANCOM-BC2 analysis
@@ -101,6 +103,7 @@ qiime feature-table filter-samples \
 ```
 
 **Filter out low abundance and low prevalence ASVs ~={red}(1 point)=~**
+
 ```
 qiime feature-table filter-features \
 --i-table table_5k.qza \
@@ -110,6 +113,7 @@ qiime feature-table filter-features \
 ```
 
 **Collapse features to genus level ~={red}(1 point)=~**
+
 ```
 qiime taxa collapse \
 --i-table table_5k_abund.qza \
@@ -119,9 +123,8 @@ qiime taxa collapse \
 ```
 
 
-
 **Run ANCOM-BC2 ~={red}(1 point)=~**
-- might need metadata with no controls 
+
 ```
 qiime composition ancombc2 \
 --i-table table_5k_abund_L6.qza \
@@ -134,15 +137,13 @@ qiime composition ancombc2 \
 **Visualize the ANCOM-BC2 results ~={red}(1 point)=~**
 - Generate a barplot to visualize the differentially abundant features. 
 ```
-# Visualize ANCOM-BC2 results
-qiime composition tabulate \  
-  --i-data ancombc2_results_bodysite_genus.qza \  
-  --o-visualization ancombc2_bodysite_genus.qzv
+qiime composition tabulate \
+--i-data ancombc2_results_bodysite_genus.qza \
+--o-visualization ancombc2_bodysite_genus.qzv
   
 qiime composition ancombc2-visualizer \
---i-data ancombc2_results_bodysite_genus.qza \
---i-taxonomy ../taxanomy/taxonomy_gg2.qza \
---o-visualization ancombc2_barplot_bodysite_genus.qzv
+  --i-data ancombc2_results_bodysite_genus.qza \
+  --o-visualization ancombc2_barplot_bodysite_genus.qzv
 ```
 
 ## Homework questions: (~={red}5 POINTS=~)
