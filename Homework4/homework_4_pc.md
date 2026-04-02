@@ -44,37 +44,37 @@ cow_r
 - Download the cow_metadata.txt, shannon.tsv, unweighted_unifrac.txt, tabulated_results.tsv, and cow_HW4_r.Rmd files from Canvas and put them in the correct directories. 
 
 **What directory should the cow_HW4_r.Rmd file go in? ~={red}(1 point)=~**
-~={red}The 04_code directory=~
 
+- *Write the directory here:*
 #### Statistical analysis and figure generation in R 
 
 - Now that we have set up the correct file structure and put our files in the correct directories, we can start our cow R analysis. 
-- Open the cow_HW4_r.Rmd file and start working through the analysis 
+- Open the cow_HW4_r.Rmd file and start working through the analysis.
 
 **Note that if you open the markdown file in your Downloads, the working directory will not be correct. Make sure to only open the markdown file after you have put it in the correct working directory.**
 
-**Read in metadata**
+**Read in metadata ~={red}(1 point)=~**
 - Fill in the file path you used in the R Markdown to load the metadata. 
 ```
-metadata <- read_tsv("../03_metadata/cow_metadata.txt")
+metadata <- read_tsv("YOUR FILE PATH HERE")
 ```
 
-**Read in alpha diversity data**
+**Read in alpha diversity data ~={red}(1 point)=~**
 - Fill in the file path you used in the R Markdown to load the shannon data
 ```
-shannon <- read_tsv("alpha_div/shannon.tsv")
+shannon <- read_tsv("YOUR FILE PATH HERE")
 ```
 
-**Read in beta diversity data**
+**Read in beta diversity data ~={red}(1 point)=~**
 - Fill in the file path you used in the R Markdown to load the unweighted unifrac data
 ```
-uw_unifrac <- read_tsv("beta_div/unweighted_unifrac.txt")
+uw_unifrac <- read_tsv("YOUR FILE PATH HERE")
 ```
 
-**Load in tabulated results
+**Load in tabulated results ~={red}(1 point)=~**
 - Fill in the file path you used in the R Markdown to load the tabulated_results.tsv
 ```
-tabulated_results <- read_tsv("taxonomy/tabulated_results.tsv")
+tabulated_results <- read_tsv("YOUR FILE PATH HERE")
 ```
 
 #### Cow Body Site - ANCOM-BC2 in Qiime2
@@ -96,10 +96,7 @@ module load qiime2/2026.1_amplicon
 # Get matadata with no controls
 cp /pl/active/courses/2025_summer/CSU_2025/cow_hw/cow_metadata_nocontrols.txt .
 
-qiime feature-table filter-samples \
-  --i-table ../dada2/table_nomitochloro_gg2_filtered300.qza \
-  --m-metadata-file cow_metadata_nocontrols.txt \
-  --o-filtered-table table_nomitochlorocontrols_gg2_filtered300.qza
+qiime feature-table filter-samples \--i-table ../dada2/table_nomitochloro_gg2_filtered300.qza \--m-metadata-file cow_metadata_nocontrols.txt \--o-filtered-table table_nomitochlorocontrols_gg2_filtered300.qza
 ```
 
 **Filter Samples ~={red}(1 point)=~** 
@@ -107,62 +104,47 @@ qiime feature-table filter-samples \
 - Navigate into the ancombc2 directory
 - Choose the min frequency for sample filtering:
 ```
-qiime feature-table filter-samples \
---i-table table_nomitochlorocontrols_gg2_filtered300.qza \
---p-min-frequency 5000 \
---o-filtered-table table_5k.qza
+qiime feature-table filter-samples \--i-table table_nomitochlorocontrols_gg2_filtered300.qza \--p-min-frequency YOUR NUMBER HERE \--o-filtered-table table_5k.qza
 ```
 
 **Filter out low abundance and low prevalence ASVs ~={red}(1 point)=~**
 
 ```
-qiime feature-table filter-features \
---i-table table_5k.qza \
---p-min-frequency 50 \
---p-min-samples 20 \
---o-filtered-table table_5k_abund.qza
+qiime feature-table filter-features \--i-table INPUT TABLE \--p-min-frequency 50 \--p-min-samples 20 \--o-filtered-table table_5k_abund.qza
 ```
 
 **Collapse features to genus level ~={red}(1 point)=~**
+- We will collapse to the genus level to make it easier to interpret the results. (Hint: We used 7 for species, so think about which number you would use for genus.)
 
 ```
-qiime taxa collapse \
---i-table table_5k_abund.qza \
---i-taxonomy ../taxonomy/taxonomy_gg2.qza \
---p-level 6 \
---o-collapsed-table table_5k_abund_L6.qza
+qiime taxa collapse \--i-table table_5k_abund.qza \--i-taxonomy ../taxonomy/taxonomy_gg2.qza \--p-level GENUS NUMBER \--o-collapsed-table table_5k_abund_GENUS NUMBER.qza
 ```
 
 
 **Run ANCOM-BC2 ~={red}(1 point)=~**
 
 ```
-qiime composition ancombc2 \
---i-table table_5k_abund_L6.qza \
---m-metadata-file cow_metadata_nocontrols.txt \
---p-fixed-effects-formula body_site \
---o-ancombc2-output ancombc2_results_bodysite_genus.qza
+qiime composition ancombc2 \--i-table table_5k_abund_GENUS NUMBER.qza \--m-metadata-file cow_metadata_nocontrols.txt \--p-fixed-effects-formula body_site \--o-ancombc2-output ancombc2_results_bodysite_genus.qza
 ```
 
 
 **Visualize the ANCOM-BC2 results ~={red}(1 point)=~**
 - Generate a barplot to visualize the differentially abundant features. 
 ```
-qiime composition tabulate \
---i-data ancombc2_results_bodysite_genus.qza \
---o-visualization ancombc2_bodysite_genus.qzv
+qiime composition tabulate \--i-data INPUT FILE \--o-visualization ancombc2_bodysite_genus.qzv
   
-qiime composition ancombc2-visualizer \
-  --i-data ancombc2_results_bodysite_genus.qza \
-  --o-visualization ancombc2_barplot_bodysite_genus.qzv
+qiime composition ancombc2-visualizer \--i-data INPUT FILE \--o-visualization ancombc2_barplot_bodysite_genus.qzv
 ```
 
 ## Homework questions: (~={red}5 POINTS=~)
 1. Describe one way to get data from your qiime2 outputs into a format that can be used for R. 
-   ~={red}Unzip qza's and get the text file with the data, pull csv's from qiime2 view, or use the export command from qiime2=~
-2. Which body site appeared most distinct in the taxa bar plot, meaning it was not similar to at least one of the other body sites? Explain why that site looks different. ~={red}Fecal. Nasal and oral should be similar and skin and udder should be similar =~
-3. When generating the filtered table for ANCOM-BC2, what value did you choose for `--p-min-frequency`? Which core metrics parameter should this match, and why do these values need to be the same? (Report your core metrics value here: ___) ~={red}this should match their core metrics sampling depth, and they are the same becuase we need to filter out any samples with fewer features than we rarefied at=~
-4. Why do we filter out samples with low frequency and filter out low abundance ASVs? ~={red}Filtering can provide better resolution and limit false discovery rate which increases statistical power=~ 
+
+2. Which body site appeared most distinct in the taxa bar plot, meaning it was not similar to at least one of the other body sites? Explain why that site looks different. 
+
+3. When generating the filtered table for ANCOM-BC2, what value did you choose for `--p-min-frequency`? Which core metrics parameter should this match, and why do these values need to be the same? (Report your core metrics value here:     ___) 
+
+4. Why do we filter out samples with low frequency and low abundance ASVs?
+
 5. What was the most enriched genus in skin compared to fecal, and what was the most depleted genus in skin compared to fecal (make sure adjusted p is set to less than 0.05)?
-	~={red}Enriched - atopostipes, depleted - streptococcus =~
+	
 
