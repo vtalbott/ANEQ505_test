@@ -104,9 +104,23 @@
               "icon": "lucide-file",
               "title": "homework_4_answers"
             }
+          },
+          {
+            "id": "e9b058ae36151012",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "conflict-files-obsidian-git"
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -309,8 +323,10 @@
       }
     ]
   },
-  "active": "430d7a95e9ce1f29",
+  "active": "e9b058ae36151012",
   "lastOpenFiles": [
+    "Homework4/homework_4_answers.md",
+    "conflict-files-obsidian-git.md",
     "Homework4/cow_r/05_figures/unweighted_unifrac_bodysite_pcoa.jpeg",
     "Homework4/cow_r/05_figures/taxa_family_sample_type.jpeg",
     "Homework4/cow_r/05_figures/taxa_family_fecal.jpeg",
@@ -327,16 +343,13 @@
     "Homework4/cow_r/04_code/beta_div",
     "Homework4/cow_r/04_code/alpha_div/shannon.tsv",
     "Homework3/homework_3_answers_and_rubric.md",
-    "Homework4/homework_4_answers.md",
     "Homework2/homework_2_answers_rubric.md",
-    "conflict-files-obsidian-git.md",
     "Homework3/homework_3_mac.md",
     "r_decomp_tutorial/05_figures/alpha_div_addOc.jpeg",
     "r_decomp_tutorial/05_figures/add_split_shannon.jpeg",
     "r_decomp_tutorial/05_figures/add_split_faiths_facility.jpeg",
     "r_decomp_test/05_figures/taxa_genus_sample_type_arf.jpeg",
     "r_decomp_test/05_figures/taxa_genus_add.jpeg",
-    "r_decomp_test/05_figures/taxa_family_sample_type.jpeg",
     "Homework2/homework_2_mac_VS.md",
     "Homework3/homework_3_pc.md",
     "Homework2/homework_2_PC_VS.md",

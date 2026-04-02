@@ -1,8 +1,8 @@
 Set up correct directory structure~={red}(1point)=~
+Correct file path for loading in metadata~={red}(1 point)=~
 Correct file path for loading in alpha diversity data ~={red}(1 point)=~
 Correct file path for loading in beta diversity data ~={red}(1 point)=~
 Correct file path for loading in tabulate_results.tsv (taxabarplot) ~={red}(1 point)=~
-Alpha diversity plot, Beta diversity plot, Taxabar plot  ~={red}(1 point)=~
 Filter table for ANCOM-BC2~={red} (~={red}1 point=~)=~
 Filtering out low abundance/low prevalence ASVs ~={red}(~={red}1 point=~)=~
 Collapse to species level ~={red}(~={red}1 point=~)=~
@@ -15,50 +15,75 @@ Questions ~={red} (5 points)=~
 
 Due: 
 
-**For complete credit for this assignment, you must answer all questions and include all commands in your obsidian upload.** 
+**For complete credit for this assignment, you must answer all questions and include all commands in your Obsidian upload.** 
 
 ------------------------------------------------------------------
 **Learning Objectives**
 1. Practice recording commands and editing code to match your analysis.
-2. Create publication ready figures for alpha and beta diversity.
+2. Create publication-ready figures for alpha and beta diversity.
 3. Understand how to run ANCOM-BC2 and how to interpret the results. 
 --------------------------------------------------
 
 #### Cow Body Site - making figures in R
 
+**Set up the cow R analysis file structure**
+- Make a cow_r directory, and inside the cow_r directory, make the following directories 
+cow_r  
+├── 01_notes  
+├── 02_data  
+├── 03_metadata  
+├── 04_code  
+└── 05_figures
+
+- Inside the 04_code directory, make the following directories
+04_code  
+├── alpha_div 
+├── beta_div 
+├── taxonomy
+
+- Download the cow_metadata.txt, shannon.tsv, unweighted_unifrac.txt, tabulated_results.tsv, and cow_HW4_r.Rmd files from Canvas and put them in the correct directories. 
+
+**What directory should the cow_HW4_r.Rmd file go in? ~={red}(1 point)=~**
+~={red}The 04_code directory=~
+
+#### Statistical analysis and figure generation in R 
+
+- Now that we have set up the correct file structure and put our files in the correct directories, we can start our cow R analysis. 
+- Open the cow_HW4_r.Rmd file and start working through the analysis 
+
+**Note that if you open the markdown file in your Downloads, the working directory will not be correct. Make sure to only open the markdown file after you have put it in the correct working directory.**
+
 **Read in metadata**
-- Fill in the file path you used in the R Markdown to load in the metadata. 
+- Fill in the file path you used in the R Markdown to load the metadata. 
 ```
 metadata <- read_tsv("../03_metadata/cow_metadata.txt")
 ```
 
 **Read in alpha diversity data**
-- Fill in the file path you used in the R Markdown to load in the shannon data
+- Fill in the file path you used in the R Markdown to load the shannon data
 ```
 shannon <- read_tsv("alpha_div/shannon.tsv")
 ```
 
-
 **Read in beta diversity data**
-- Fill in the file path you used in the R Markdown to load in the unweighted unifrac data
+- Fill in the file path you used in the R Markdown to load the unweighted unifrac data
 ```
 uw_unifrac <- read_tsv("beta_div/unweighted_unifrac.txt")
 ```
 
 **Load in tabulated results
-- Fill in the file path you used in the R Markdown to load in the tabulated_results.tsv
+- Fill in the file path you used in the R Markdown to load the tabulated_results.tsv
 ```
 tabulated_results <- read_tsv("taxonomy/tabulated_results.tsv")
 ```
 
-
-
-#### Cow Body Site - ANCOM-BC2
-**Start and interactive session and activate Qiime2**
+#### Cow Body Site - ANCOM-BC2 in Qiime2
+**Start an interactive session and activate Qiime2**
 ```
 ainteractive --ntasks=4 --time=04:00:00
 ```
 
+- **ANCOMBC2 is only available in the 2026 versions of qiime2, so we need to activate the latest version. Make sure to activate qiime2026.2**
 ```
 module purge
 module load module load qiime2/2024.10_amplicon
@@ -70,7 +95,7 @@ module load module load qiime2/2024.10_amplicon
 - Choose the min frequency for sample filtering:
 ```
 qiime feature-table filter-samples \
---i-table ../dada2/cow_table_dada2_filtered300.qza \
+--i-table ../dada2/table_nomitochloro_gg2_filtered300.qza \
 --p-min-frequency 5000 \
 --o-filtered-table table_5k.qza
 ```

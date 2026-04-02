@@ -159,19 +159,19 @@ sample_name	swab_label	BarcodeSequence	LIBRARY_CONSTRUCTION _PROTOCOL	LINKER	PLA
 2019.3.14.cow.udder.13	cow.U.7	CGTTCCTTGTTA	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 4	C9	Plate 4	C9	82458	1	3/22/17	726	cow	udder	cow.13	
 2019.3.14.cow.udder.9	cow.U.8	CTCCGAACAACA	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 4	A4	Plate 4	A4	74890	1	8/9/16	951	cow	udder	cow.9	
 2019.3.14.cow.udder.2	cow.U.9	ACGTATTCGAAG	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 3	C4	Plate 3	C4	35452	1	1/31/17	776	cow	udder	cow.2	
-EC1.3	EC1.3	GATCTAATCGAG	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 3	C2	Plate 3	C2	EC1.3	not_applicable	not_applicable	not_applicable	control	control	control	
-EC1.4	EC1.4	ACCAGAAATGTC	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 4	D4	Plate 4	D4	EC1.4	not_applicable	not_applicable	not_applicable	control	control	control	
-EC2.3	EC2.3	CTGATGTACACG	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 3	C3	Plate 3	C3	EC2.3	not_applicable	not_applicable	not_applicable	control	control	control	
-EC2.4	EC2.4	AACACCATCGAC	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 4	E4	Plate 4	E4	EC2.4	not_applicable	not_applicable	not_applicable	control	control	control	
-EC3.3	EC3.3	CCGCAGCCGCAG	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 3	D2	Plate 3	D2	EC3.3	not_applicable	not_applicable	not_applicable	control	control	control	
-EC3.4	EC3.4	TTATCCAGTCCT	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 4	E5	Plate 4	E5	EC3.4	not_applicable	not_applicable	not_applicable	control	control	control	
-EC4.3	EC4.3	ACACCGCACAAT	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 3	G11	Plate 3	G11	EC4.3	not_applicable	not_applicable	not_applicable	control	control	control	
-EC4.4	EC4.4	ACCACCGTAACC	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 4	E10	Plate 4	E10	EC4.4	not_applicable	not_applicable	not_applicable	control	control	control	
-EC5.3	EC5.3	CACAACCACAAC	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 3	G12	Plate 3	G12	EC5.3	not_applicable	not_applicable	not_applicable	control	control	control	
-EC5.4	EC5.4	CGGTTGGCGGGT	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 4	F10	Plate 4	F10	EC5.4	not_applicable	not_applicable	not_applicable	control	control	control	
-EC6.3	EC6.3	CAGCCCTACCCA	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 3	H11	Plate 3	H11	EC6.3	not_applicable	not_applicable	not_applicable	control	control	control	
-EC6.4	EC6.4	CCACCGGGCCGA	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 4	G10	Plate 4	G10	EC6.4	not_applicable	not_applicable	not_applicable	control	control	control	
-EC7.3	EC7.3	TCGTTGGGACTA	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 3	H12	Plate 3	H12	EC7.3	not_applicable	not_applicable	not_applicable	control	control	control	
-EC7.4	EC7.4	TATGTGCCGGCT	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 4	H10	Plate 4	H10	EC7.4	not_applicable	not_applicable	not_applicable	control	control	control	
-PC1.3	PC1.3	TGGAGCCTTGTC	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 3	D3	Plate 3	D3	PC1.3	not_applicable	not_applicable	not_applicable	control	control	control	
-PC1.4	PC1.4	CTCATCATGTTC	Illumina miSeq	GT	Illumina	GTGTGCCAGCMGCCGCGGTAA	CSUPMF	4/1/19	Indexes	FWD:GTGYCAGCMGCCGCGGTAA; REV:GGACTACNVGGGTWTCTAAT	Sequencing by synthesis	16S rRNA	V4	CSUPMF		Illumina miSeq	Plate 4	D5	Plate 4	D5	PC1.4	not_applicable	not_applicable	not_applicable	control	control	control	
+																												
+																												
+																												
+																												
+																												
+																												
+																												
+																												
+																												
+																												
+																												
+																												
+																												
+																												
+																												
+																												
