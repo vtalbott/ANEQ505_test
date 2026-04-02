@@ -83,10 +83,10 @@ tabulated_results <- read_tsv("taxonomy/tabulated_results.tsv")
 ainteractive --ntasks=4 --time=04:00:00
 ```
 
-- **ANCOMBC2 is only available in the 2026 versions of qiime2, so we need to activate the latest version. Make sure to activate qiime2026.2**
+- **ANCOMBC2 is only available in the 2026 versions of qiime2, so we need to activate the latest version. Make sure to activate qiime2026**
 ```
 module purge
-module load module load qiime2/2024.10_amplicon
+module load module load qiime2/2026.1_amplicon
 ```
 
 **Filter Samples ~={red}(1 point)=~** 
