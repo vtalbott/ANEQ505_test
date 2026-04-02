@@ -13,7 +13,7 @@ Questions ~={red} (5 points)=~
 ~={red}15 points total=~
 ------------------------------------------------------------------
 
-Due: 
+Due: 04/09/2026
 
 **For complete credit for this assignment, you must answer all questions and include all commands in your Obsidian upload.** 
 
@@ -27,7 +27,7 @@ Due:
 #### Cow Body Site - making figures in R
 
 **Set up the cow R analysis file structure**
-- Make a cow_r directory, and inside the cow_r directory, make the following directories 
+- Make a cow_r directory on your local computer, and inside the cow_r directory, make the following directories 
 cow_r  
 ├── 01_notes  
 ├── 02_data  
@@ -86,7 +86,7 @@ ainteractive --ntasks=4 --time=04:00:00
 - **ANCOMBC2 is only available in the 2026 versions of qiime2, so we need to activate the latest version. Make sure to activate qiime2026**
 ```
 module purge
-module load module load qiime2/2026.1_amplicon
+module load qiime2/2026.1_amplicon
 ```
 
 **Filter Samples ~={red}(1 point)=~** 
@@ -109,24 +109,25 @@ qiime feature-table filter-features \
 --o-filtered-table table_5k_abund.qza
 ```
 
-**Collapse features to species level ~={red}(1 point)=~**
+**Collapse features to genus level ~={red}(1 point)=~**
 ```
 qiime taxa collapse \
 --i-table table_5k_abund.qza \
 --i-taxonomy ../taxonomy/taxonomy_gg2.qza \
---p-level 7 \
---o-collapsed-table table_5k_abund_L7.qza
+--p-level 6 \
+--o-collapsed-table table_5k_abund_L6.qza
 ```
--made it up to this point - ancombc2 is not available for qiime2 2024.10
+
 
 
 **Run ANCOM-BC2 ~={red}(1 point)=~**
+- might need metadata with no controls 
 ```
 qiime composition ancombc2 \
---i-table table_5k_abund_L7.qza \
+--i-table table_5k_abund_L6.qza \
 --m-metadata-file ../metadata/cow_metadata.txt \
 --p-fixed-effects-formula body_site \
---o-ancombc2-output ancombc2-results-bodysite.qza
+--o-ancombc2-output ancombc2_results_bodysite_genus.qza
 ```
 
 
@@ -134,11 +135,14 @@ qiime composition ancombc2 \
 - Generate a barplot to visualize the differentially abundant features. 
 ```
 # Visualize ANCOM-BC2 results
-bash
+qiime composition tabulate \  
+  --i-data ancombc2_results_bodysite_genus.qza \  
+  --o-visualization ancombc2_bodysite_genus.qzv
+  
 qiime composition ancombc2-visualizer \
---i-data ancombc2-results-bodysite.qza \
+--i-data ancombc2_results_bodysite_genus.qza \
 --i-taxonomy ../taxanomy/taxonomy_gg2.qza \
---o-visualization ancombc2-barplot-bodysite.qzv
+--o-visualization ancombc2_barplot_bodysite_genus.qzv
 ```
 
 ## Homework questions: (~={red}5 POINTS=~)
