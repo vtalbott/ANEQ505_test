@@ -53,12 +53,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homework4/homework_4_answers.md",
+                "file": "Homework4/homework_4_pc.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "homework_4_answers"
+              "title": "homework_4_pc"
             }
           }
         ],
@@ -119,8 +119,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "d8a9feb09b182743",
@@ -229,12 +228,14 @@
   },
   "active": "0d3e7762d0da77c1",
   "lastOpenFiles": [
+    "Homework4/homework_4_mac.md",
+    "Homework4/homework_4_pc.md",
+    "Homework4/homework_4_answers.md",
     "Homework2/homework_2_answers_rubric.md",
     "Homework2/homework_2_mac_VS.md",
     "Homework2/homework_2_answers_qiime2026.1.md",
     "Homework/homework_1_mac.md",
     "Homework/Homework 1 Rubric.md",
-    "Homework4/homework_4_answers.md",
     "Homework4/cow_r/04_code/beta_div/unweighted_unifrac.txt",
     "Homework4/cow_r/unweighted_unifrac.txt",
     "Homework4/cow_r/ordination.txt",
@@ -272,7 +273,6 @@
     "Homework/homework_1_mac qiime_2026.1.md",
     "Homework/homework_2_answers.md",
     "Homework/homework_1_PC.md",
-    "Obsidian_setup/VS_code_in_obsidian.md",
-    "VS Code test.md"
+    "Obsidian_setup/VS_code_in_obsidian.md"
   ]
 }
