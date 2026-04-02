@@ -91,13 +91,24 @@ module load qiime2/2026.1_amplicon
 (When running commands using qiime2/2026.1_amplicon you might get this warning: */curc/sw/install/bio/qiime2/2026.1/2026.1_amplicon_env/lib/python3.10/site-packages/unifrac/__init__.py:9: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81. import pkg_resources*. This is just saying that one of the qiime2 packages needs to be updated it won't affect the qiime2 outputs.)
 
 
+**Filter controls out of our table
+```
+# Get matadata with no controls
+cp /pl/active/courses/2025_summer/CSU_2025/cow_hw/cow_metadata_nocontrols.txt .
+
+qiime feature-table filter-samples \
+  --i-table ../dada2/table_nomitochloro_gg2_filtered300.qza \
+  --m-metadata-file cow_metadata_nocontrols.txt \
+  --o-filtered-table table_nomitochlorocontrols_gg2_filtered300.qza
+```
+
 **Filter Samples ~={red}(1 point)=~** 
 - Navigate into the decomp tutorial and make a new ancombc2 directory for the ANCOM-BC2 analysis
 - Navigate into the ancombc2 directory
 - Choose the min frequency for sample filtering:
 ```
 qiime feature-table filter-samples \
---i-table ../dada2/table_nomitochloro_gg2_filtered300.qza \
+--i-table ../dada2/table_nomitochlorocontrols_gg2_filtered300.qza \
 --p-min-frequency 5000 \
 --o-filtered-table table_5k.qza
 ```
@@ -128,7 +139,7 @@ qiime taxa collapse \
 ```
 qiime composition ancombc2 \
 --i-table table_5k_abund_L6.qza \
---m-metadata-file ../metadata/cow_metadata.txt \
+--m-metadata-file cow_metadata_nocontrols.txt \
 --p-fixed-effects-formula body_site \
 --o-ancombc2-output ancombc2_results_bodysite_genus.qza
 ```
