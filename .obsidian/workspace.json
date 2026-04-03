@@ -60,9 +60,23 @@
               "icon": "lucide-file",
               "title": "homework_4_pc"
             }
+          },
+          {
+            "id": "ada22c5254bcfa83",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "conflict-files-obsidian-git"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -226,11 +240,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "0d3e7762d0da77c1",
+  "active": "b9c6b380112d5bce",
   "lastOpenFiles": [
+    "Homework4/homework_4_pc.md",
+    "conflict-files-obsidian-git.md",
     "Homework4/homework_4_mac.md",
     "Homework4/homework_4_answers.md",
-    "Homework4/homework_4_pc.md",
     "Homework4.zip",
     "zibKDorS",
     "Homework2/homework_2_answers_rubric.md",
@@ -241,7 +256,6 @@
     "Homework4/cow_r/04_code/beta_div/unweighted_unifrac.txt",
     "Homework4/cow_r/unweighted_unifrac.txt",
     "Homework4/cow_r/ordination.txt",
-    "conflict-files-obsidian-git.md",
     "Homework3/homework_3_mac.md",
     "Homework4/cow_r/04_code/cow_HW4_r.Rmd",
     "Homework4/cow_r/04_code/cow_HW4_r_answers.Rmd",
