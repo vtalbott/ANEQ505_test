@@ -67,12 +67,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Qiime2_2026.1.md",
+                "file": "Homework4/homework_4_mac.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Qiime2_2026.1"
+              "title": "homework_4_mac"
             }
           }
         ],
@@ -242,6 +242,8 @@
   },
   "active": "65499dd8fb2fc22b",
   "lastOpenFiles": [
+    "Homework4/homework_4_answers.md",
+    "Qiime2_2026.1.md",
     "Homework/homework_1_mac.md",
     "r_decomp_tutorial/05_figures/taxa_family_sample_type.jpeg",
     "r_decomp_tutorial/05_figures/taxa_family_add.jpeg",
@@ -250,10 +252,8 @@
     "r_decomp_tutorial/04_code/taxonomy/tabulated_results.tsv",
     "r_decomp_tutorial/05_figures/beta_div_sample_type.jpeg",
     "Homework/homework_1_mac_qiime_2026.1.md",
-    "Qiime2_2026.1.md",
     "Homework2/homework_2_answers_qiime2026.1.md",
     "Homework2/homework_2_answers_rubric.md",
-    "Homework4/homework_4_answers.md",
     "conflict-files-obsidian-git.md",
     "Homework4/homework_4_pc.md",
     "Homework4/homework_4_mac.md",
