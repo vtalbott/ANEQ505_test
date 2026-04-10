@@ -67,12 +67,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homework4/homework_4_pc.md",
+                "file": "Homework2/homework_2_answers_rubric.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "homework_4_pc"
+              "title": "homework_2_answers_rubric"
             }
           }
         ],
@@ -242,6 +242,7 @@
   },
   "active": "65499dd8fb2fc22b",
   "lastOpenFiles": [
+    "Homework4/homework_4_pc.md",
     "Homework4/santiago_trouble_shooting/table/data/feature-table.tsv",
     "Homework4/santiago_trouble_shooting/table/provenance/artifacts/df7224e0-bc4e-43f8-a489-514bf5273bbf/action/action.yaml",
     "Homework4/santiago_trouble_shooting/table/provenance/artifacts/dd638619-1289-48fa-8b99-f8029c930402/action/action.yaml",
@@ -252,7 +253,6 @@
     "Homework4/santiago_trouble_shooting/table/provenance/artifacts/b7c3e691-ea51-4547-94dd-f79f49e41a36/action/action.yaml",
     "Homework4/santiago_trouble_shooting/table/provenance/artifacts/b6847139-0ad2-4213-8a9e-67f89f712d22/action/action.yaml",
     "Homework4/santiago_trouble_shooting/table/provenance/artifacts/84a65729-f457-442f-bc62-989b2bb01c5f/action/metadata.tsv",
-    "Homework4/santiago_trouble_shooting/table/provenance/artifacts/84a65729-f457-442f-bc62-989b2bb01c5f/action/action.yaml",
     "Homework4/homework_4_mac.md",
     "Homework4/homework_4_answers.md",
     "Qiime2_2026.1.md",
@@ -264,7 +264,6 @@
     "Homework2/homework_2_answers_qiime2026.1.md",
     "Homework2/homework_2_answers_rubric.md",
     "conflict-files-obsidian-git.md",
-    "Homework4/homework_4_pc.md",
     "Homework2/homework_2_mac_VS.md",
     "Homework/Homework 1 Rubric.md",
     "Homework3/homework_3_mac.md",
