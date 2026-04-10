@@ -67,12 +67,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homework2/homework_2_answers_rubric.md",
+                "file": "Homework4/homework_4_answers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "homework_2_answers_rubric"
+              "title": "homework_4_answers"
             }
           }
         ],
@@ -133,7 +133,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "d8a9feb09b182743",
@@ -242,6 +243,8 @@
   },
   "active": "65499dd8fb2fc22b",
   "lastOpenFiles": [
+    "Homework2/homework_2_answers_qiime2026.1.md",
+    "Homework2/homework_2_answers_rubric.md",
     "Homework4/homework_4_pc.md",
     "Homework4/santiago_trouble_shooting/table/data/feature-table.tsv",
     "Homework4/santiago_trouble_shooting/table/provenance/artifacts/df7224e0-bc4e-43f8-a489-514bf5273bbf/action/action.yaml",
@@ -261,8 +264,6 @@
     "r_decomp_tutorial/05_figures/taxa_family_add.jpeg",
     "r_decomp_tutorial/05_figures/beta_div_sample_type.jpeg",
     "Homework/homework_1_mac_qiime_2026.1.md",
-    "Homework2/homework_2_answers_qiime2026.1.md",
-    "Homework2/homework_2_answers_rubric.md",
     "conflict-files-obsidian-git.md",
     "Homework2/homework_2_mac_VS.md",
     "Homework/Homework 1 Rubric.md",
