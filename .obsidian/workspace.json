@@ -81,12 +81,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Maaslin3.md",
+                "file": "Qiime2_2026.1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Maaslin3"
+              "title": "Qiime2_2026.1"
             }
           }
         ],
@@ -256,8 +256,8 @@
   },
   "active": "b1fb3490e2ecd84c",
   "lastOpenFiles": [
-    "Homework4/homework_4_answers.md",
     "Maaslin3.md",
+    "Homework4/homework_4_answers.md",
     "Homework2/homework_2_answers_qiime2026.1.md",
     "Homework2/homework_2_answers_rubric.md",
     "Homework4/homework_4_pc.md",
