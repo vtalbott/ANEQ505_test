@@ -95,12 +95,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian_setup/VS_code_in_obsidian.md",
+                "file": "Homework/homework_1_mac.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "VS_code_in_obsidian"
+              "title": "homework_1_mac"
             }
           }
         ],
@@ -270,6 +270,7 @@
   },
   "active": "4c6536ad1e5a9915",
   "lastOpenFiles": [
+    "Obsidian_setup/VS_code_in_obsidian.md",
     "VS Code test.md",
     "Remoteing_into_Alpine_and_File_Transfers.md",
     "Qiime2_2026.1.md",
@@ -314,7 +315,6 @@
     "Homework2/homework_2_PC_VS.md",
     "Homework/homework_2_mac.md",
     "Homework/homework_2_PC.md",
-    "Module 6/Tutorial test code.md",
-    "Homework2/homework_2_answers_rubric VT.md"
+    "Module 6/Tutorial test code.md"
   ]
 }
